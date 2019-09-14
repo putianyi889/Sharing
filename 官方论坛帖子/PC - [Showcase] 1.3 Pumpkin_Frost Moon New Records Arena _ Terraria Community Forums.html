@@ -1,0 +1,2104 @@
+<!DOCTYPE html>
+<!-- saved from url=(0102)https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/ -->
+<html id="XenForo" lang="en-US" dir="LTR" class="Public LoggedIn NoSidebar  Responsive hasJs NoTouch HasDragDrop js canvas canvastext webgl rgba backgroundsize borderimage borderradius boxshadow opacity cssanimations csstransforms csstransforms3d csstransitions generatedcontent video localstorage csscalc" xmlns:fb="http://www.facebook.com/2008/fbml" style=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--<base href="https://forums.terraria.org/">--><base href=".">
+<script src="./PC - [Showcase] 1.3 Pumpkin_Frost Moon New Records Arena _ Terraria Community Forums_files/sdk.js.下载" async="" crossorigin="anonymous"></script><script type="text/javascript" async="" src="./PC - [Showcase] 1.3 Pumpkin_Frost Moon New Records Arena _ Terraria Community Forums_files/analytics.js.下载"></script><script>
+			var _b = document.getElementsByTagName('base')[0], _bH = "https://forums.terraria.org/";
+			if (_b && _b.href != _bH) _b.href = _bH;
+		</script>
+<title>PC - [Showcase] 1.3 Pumpkin/Frost Moon New Records Arena | Terraria Community Forums</title>
+
+<link rel="stylesheet" href="./PC - [Showcase] 1.3 Pumpkin_Frost Moon New Records Arena _ Terraria Community Forums_files/css.php">
+<link rel="stylesheet" href="./PC - [Showcase] 1.3 Pumpkin_Frost Moon New Records Arena _ Terraria Community Forums_files/css(1).php">
+<script async="" src="./PC - [Showcase] 1.3 Pumpkin_Frost Moon New Records Arena _ Terraria Community Forums_files/js"></script>
+<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+	
+		gtag('config', 'UA-55199118-1', {
+			// <!-- slot: ga_config_start -->
+			
+			
+				'anonymize_ip': true,
+			
+		});
+	</script>
+<script src="./PC - [Showcase] 1.3 Pumpkin_Frost Moon New Records Arena _ Terraria Community Forums_files/jquery.min.js.下载"></script>
+<script>if (!window.jQuery) { document.write('<scr'+'ipt type="text/javascript" src="js/jquery/jquery-1.11.0.min.js"><\/scr'+'ipt>'); }</script>
+<script src="./PC - [Showcase] 1.3 Pumpkin_Frost Moon New Records Arena _ Terraria Community Forums_files/xenforo.js.下载"></script>
+<script src="./PC - [Showcase] 1.3 Pumpkin_Frost Moon New Records Arena _ Terraria Community Forums_files/discussion.js.下载"></script>
+<script src="./PC - [Showcase] 1.3 Pumpkin_Frost Moon New Records Arena _ Terraria Community Forums_files/redactor.js.下载"></script>
+<script src="./PC - [Showcase] 1.3 Pumpkin_Frost Moon New Records Arena _ Terraria Community Forums_files/bb_code_edit.js.下载"></script>
+<script src="./PC - [Showcase] 1.3 Pumpkin_Frost Moon New Records Arena _ Terraria Community Forums_files/attachment_editor_new.js.下载"></script>
+<script src="./PC - [Showcase] 1.3 Pumpkin_Frost Moon New Records Arena _ Terraria Community Forums_files/flow-rollup.min.js.下载"></script>
+<script type="text/javascript">
+// JavaScript function
+(function()
+{
+	var TabTitle = {};
+
+	var updateTitle = function(text)
+	{
+		// get tabText
+		var tabText = document.title;
+
+		// remove alert
+		if (tabText[0] === '(')
+		{
+			tabText = tabText.slice(tabText.indexOf(' '));
+		}
+
+		// add tabText
+		if ((text + '').length > 0)
+		{
+			document.title = '(' + text + ') ' + tabText;
+		} 
+		else
+		{
+			document.title = tabText;
+		}
+	};
+
+	// called from jQuery function
+	TabTitle.setTitle = function(text)
+	{
+		if (!text)
+		{
+			text = '';
+		}
+
+		updateTitle(text);
+	};
+
+	window.TabTitle = TabTitle;
+
+})();
+
+// jQuery function 
+!function($, window, document, _undefined)
+{
+	var TabAlerts = {};
+	
+	TabAlerts.PollConnection = function()
+	{
+		// poll server every 15 seconds
+		TabAlerts.PollFrequency = 15000;
+
+		$(document).bind('XFAjaxSuccess', TabAlerts.AjaxSuccess);
+
+		TabAlerts.AjaxSuccess();
+		setInterval(TabAlerts.PollServer, TabAlerts.PollFrequency);
+	}
+
+	TabAlerts.PollServer = function()
+	{
+		if (!TabAlerts.xhr && new Date().getTime() - TabAlerts.lastAjaxTime > TabAlerts.PollFrequency)
+    	{
+			var ajaxStart = $(document).data('events').ajaxStart[0].handler;
+			
+			$(document).unbind('ajaxStart', ajaxStart);
+			
+			TabAlerts.xhr = XenForo.ajax('index.php?tabalerts', {}, function(){}, {
+				error: function(xhr, responseText, errorThrown)
+				{
+					delete(TabAlerts.xhr);
+					switch (responseText)
+					{
+						case 'timeout':
+						{
+							console.warn(XenForo.phrases.server_did_not_respond_in_time_try_again);
+							break;
+						}
+						case 'parsererror':
+						{
+							console.error('PHP ' + xhr.responseText);
+							break;
+						}
+					}
+					return false;
+				},
+				timeout: TabAlerts.PollFrequency
+			});
+			
+			$(document).bind('ajaxStart', ajaxStart);
+    	}
+	}
+
+	TabAlerts.AjaxSuccess = function(ajaxData)
+	{
+		// get alertCount		
+		var alertCount = parseInt($('#ConversationsMenu_Counter').text()) + parseInt($('#AlertsMenu_Counter').text());
+
+		// call JavaScript function
+		TabTitle.setTitle(alertCount);
+
+  		TabAlerts.lastAjaxTime = new Date().getTime();
+
+  		delete(TabAlerts.xhr);
+	}
+
+	$(document).ready(TabAlerts.PollConnection);
+}
+(jQuery, this, document);
+</script>
+<script src="./PC - [Showcase] 1.3 Pumpkin_Frost Moon New Records Arena _ Terraria Community Forums_files/custom.js.下载"></script>
+<link href="https://terraria.org/favicon.ico" rel="shortcut icon">
+<link href="https://terraria.org/apple-touch-icon.png" rel="apple-touch-icon">
+<link href="https://terraria.org/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="76x76">
+<link href="https://terraria.org/apple-touch-icon-120x120.png" rel="apple-touch-icon" sizes="120x120">
+<link href="https://terraria.org/apple-touch-icon-76x76.png" rel="apple-touch-icon" sizes="152x152">
+<link rel="alternate" type="application/rss+xml" title="RSS feed for Terraria Community Forums" href="https://forums.terraria.org/index.php?forums/-/index.rss">
+<link rel="next" href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/page-2">
+<link rel="canonical" href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/">
+<meta name="description" content="Hi guys, this is my first post. I have made several new records for Pumpkin/Frost moon so just to let you guys know.
+
+My Videos:
+[MEDIA] [MEDIA]
+
+My..."> <meta property="og:site_name" content="Terraria Community Forums">
+<meta property="og:image" content="https://forums.terraria.org/data/avatars/m/43/43152.jpg?1453650397">
+<meta property="og:image" content="https://forums.terraria.org/assets/tree200.png">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/">
+<meta property="og:title" content="PC - [Showcase] 1.3 Pumpkin/Frost Moon New Records Arena">
+<meta property="og:description" content="Hi guys, this is my first post. I have made several new records for Pumpkin/Frost moon so just to let you guys know.
+
+My Videos:
+[MEDIA] [MEDIA]
+
+My...">
+<script src="./PC - [Showcase] 1.3 Pumpkin_Frost Moon New Records Arena _ Terraria Community Forums_files/sdk.js(1).下载" async=""></script><script async="" src="./PC - [Showcase] 1.3 Pumpkin_Frost Moon New Records Arena _ Terraria Community Forums_files/widgets.js.下载"></script><script charset="utf-8" src="./PC - [Showcase] 1.3 Pumpkin_Frost Moon New Records Arena _ Terraria Community Forums_files/button.fc9ebf951a9289ff2153fdd98b8fd4a4.js.下载"></script><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}</style></head>
+<body class="node194 node4 node177 SelectQuotable" style="">
+<div id="headerMover">
+<div id="headerProxy"></div>
+<div id="content" class="thread_view">
+<div class="pageWidth">
+<div class="pageContent">
+
+<!--[if lt IE 8]>
+							<p class="importantMessage">You are using an out of date browser. It  may not display this or other websites correctly.<br />You should upgrade or use an <a href="https://www.google.com/chrome/browser/" target="_blank">alternative browser</a>.</p>
+						<![endif]-->
+<div class="PanelScroller Notices" data-vertical="0" data-speed="400" data-interval="4000" style="display: block;">
+<div class="texturedPanel scrollContainer">
+<div class="PanelContainer" style="overflow: hidden; height: 64px;">
+<ol class="Panels" style="width: 20000em; left: -1269px;"><li class="panel Notice DismissParent notice_26  cloned" data-notice="26" style="float: left; width: 1269px; height: 64px;">
+<div class="baseHtml noticeContent">For issues you find with the Mobile 1.3 update, please follow <a href="https://fs30.formsite.com/505games/form15/index.html">this link</a> and give as much detail as possible. This is the speediest way to get info to DR Studios to look at your issue. Also, some troubleshooting hints <a href="https://forums.terraria.org/index.php?threads/mobile-1-3-launch-known-issues-and-workarounds.82339/">here.</a></div><a href="https://forums.terraria.org/index.php?threads/mobile-1-3-launch-known-issues-and-workarounds.82339/">
+</a><a href="https://forums.terraria.org/index.php?account/dismiss-notice&amp;notice_id=26" class="DismissCtrl Tooltip" data-offsetx="7" data-tipclass="flipped">Dismiss Notice</a>
+</li>
+<li class="panel Notice DismissParent notice_25 " data-notice="25" style="float: left; width: 1269px; height: 64px;">
+<div class="baseHtml noticeContent">For issues you find with the Switch and Console releases, please follow <a href="https://fs30.formsite.com/505games/form15/index.html">this link</a> and give as much detail as possible. This is the speediest way to get info to Pipeworks and get a hotfix in the works.</div>
+<a href="https://forums.terraria.org/index.php?account/dismiss-notice&amp;notice_id=25" class="DismissCtrl Tooltip" data-offsetx="7" data-tipclass="flipped">Dismiss Notice</a>
+</li>
+<li class="panel Notice DismissParent notice_26 " data-notice="26" style="float: left; width: 1269px; height: 64px;">
+<div class="baseHtml noticeContent">For issues you find with the Mobile 1.3 update, please follow <a href="https://fs30.formsite.com/505games/form15/index.html">this link</a> and give as much detail as possible. This is the speediest way to get info to DR Studios to look at your issue. Also, some troubleshooting hints <a href="https://forums.terraria.org/index.php?threads/mobile-1-3-launch-known-issues-and-workarounds.82339/">here.</a></div><a href="https://forums.terraria.org/index.php?threads/mobile-1-3-launch-known-issues-and-workarounds.82339/">
+</a><a href="https://forums.terraria.org/index.php?account/dismiss-notice&amp;notice_id=26" class="DismissCtrl Tooltip" data-offsetx="7" data-tipclass="flipped">Dismiss Notice</a>
+</li>
+<li class="panel Notice DismissParent notice_25  cloned" data-notice="25" style="float: left; width: 1269px; height: 64px;">
+<div class="baseHtml noticeContent">For issues you find with the Switch and Console releases, please follow <a href="https://fs30.formsite.com/505games/form15/index.html">this link</a> and give as much detail as possible. This is the speediest way to get info to Pipeworks and get a hotfix in the works.</div>
+<a href="https://forums.terraria.org/index.php?account/dismiss-notice&amp;notice_id=25" class="DismissCtrl Tooltip" data-offsetx="7" data-tipclass="flipped">Dismiss Notice</a>
+</li></ol>
+</div>
+</div>
+<div class="navContainer">
+<span class="navControls Nav JsOnly">
+<a id="n25" href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/#n25" class="current">
+<span class="arrow"><span></span></span>
+Switch and Console Issues</a>
+<a id="n26" href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/#n26" class="">
+<span class="arrow"><span></span></span>
+Mobile Issues</a>
+</span>
+</div>
+</div>
+
+<div class="titleBar">
+<h1><span class="prefix prefixPC">PC</span> [Showcase] 1.3 Pumpkin/Frost Moon New Records Arena</h1>
+<p id="pageDescription" class="muted ">
+Discussion in '<a href="https://forums.terraria.org/index.php?forums/t-mec-terraria-mechanical-engineering-corps.194/">[T-MEC] Terraria Mechanical Engineering Corps</a>' started by <a href="https://forums.terraria.org/index.php?members/mappygaming.43152/" class="username" dir="auto">MappyGaming</a>, <a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/"><span class="DateTime" title="Jan 26, 2016 at 3:18 PM">Jan 26, 2016</span></a>.
+</p>
+<div class="breadBoxTop ">
+<nav>
+<fieldset class="breadcrumb" style="">
+<a href="https://forums.terraria.org/index.php?misc/quick-navigation-menu&amp;selected=node-194" class="OverlayTrigger jumpMenuTrigger" data-cacheoverlay="true" title="Open quick navigation"></a>
+<div class="boardTitle"><strong>Terraria Community Forums</strong></div>
+<span class="crumbs">
+<span class="crust homeCrumb" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<a href="https://forums.terraria.org/index.php" class="crumb" rel="up" itemprop="url"><span itemprop="title">Home</span></a>
+<span class="arrow"><span></span></span>
+</span>
+<span class="crust selectedTabCrumb" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<a href="https://forums.terraria.org/index.php?forums/" class="crumb" rel="up" itemprop="url"><span itemprop="title">Forums</span></a>
+<span class="arrow"><span>&gt;</span></span>
+</span>
+<span class="crust" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<a href="https://forums.terraria.org/index.php?forums/#terraria-cross-platform-discussion.4" class="crumb" rel="up" itemprop="url"><span itemprop="title">Terraria - Cross-Platform Discussion</span></a>
+<span class="arrow"><span>&gt;</span></span>
+</span>
+<span class="crust" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<a href="https://forums.terraria.org/index.php?forums/terraria-guides.177/" class="crumb" rel="up" itemprop="url"><span itemprop="title">Terraria Guides</span></a>
+<span class="arrow"><span>&gt;</span></span>
+</span>
+<span class="crust" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+<a href="https://forums.terraria.org/index.php?forums/t-mec-terraria-mechanical-engineering-corps.194/" class="crumb" rel="up" itemprop="url"><span itemprop="title">[T-MEC] Terraria Mechanical Engineering Corps</span></a>
+<span class="arrow"><span>&gt;</span></span>
+</span>
+</span>
+</fieldset>
+</nav>
+</div>
+</div>
+
+<div class="pageNavLinkGroup">
+<span class="PageNav" data-page="1" data-range="2" data-start="2" data-end="2" data-last="2" data-sentinel="{{sentinel}}" data-baseurl="index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/page-{{sentinel}}">
+<div class="pageNavHeader">Page 1 of 2</div>
+<nav>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/" class="currentPage " rel="start">1</a>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/page-2" class="">2</a>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/page-2" class="text">Next &gt;</a>
+</nav>
+</span>
+<div class="linkGroup panelLinkGroup SelectionCountContainer">
+<div class="Popup">
+<a rel="Menu" class="PopupControl">Thread Tools<span class="arrowWidget"></span></a>
+
+</div>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/watch-confirm" class="OverlayTrigger" data-cacheoverlay="false">Watch Thread</a>
+</div>
+</div>
+<form action="https://forums.terraria.org/index.php?inline-mod/post/switch" method="post" class="InlineModForm section" data-cookiename="posts" data-controls="#InlineModControls" data-imodoptions="#ModerationSelect option">
+<ol class="messageList" id="messageList">
+<li id="post-882348" class="message   " data-author="MappyGaming">
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">
+<div class="messageUserBlock ">
+<div class="avatarHolder">
+<span class="helper"></span>
+<a href="https://forums.terraria.org/index.php?members/mappygaming.43152/" class="avatar Av43152m" data-avatarhtml="true"><img src="./PC - [Showcase] 1.3 Pumpkin_Frost Moon New Records Arena _ Terraria Community Forums_files/43152.jpg" width="96" height="96" alt="MappyGaming"></a>
+
+</div>
+<h3 class="userText">
+<a href="https://forums.terraria.org/index.php?members/mappygaming.43152/" class="username" dir="auto" itemprop="name">MappyGaming</a>
+<em class="userTitle" itemprop="title" style="background:url(&#39;/assets/ribbons/plantera.png&#39;);">
+Plantera
+</em>
+
+</h3>
+<div class="extraUserInfo">
+<dl class="conversationPostBitContainer">
+<a class="conversationPostBitLink" href="https://forums.terraria.org/index.php?conversations/add&amp;to=MappyGaming"><span class="conversationPostBitText">Start a Conversation</span></a>
+</dl>
+</div>
+<span class="arrow"><span></span></span>
+</div>
+</div>
+<div class="messageInfo primaryContent">
+<div class="messageContent">
+<article>
+<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+Hi guys, this is my first post. I have made several new records for Pumpkin/Frost moon so just to let you guys know.<br>
+<br>
+<span style="font-size: 22px">My Videos:</span><br>
+<iframe width="500" height="300" src="./PC - [Showcase] 1.3 Pumpkin_Frost Moon New Records Arena _ Terraria Community Forums_files/q92j5A-B1lM.html" frameborder="0" allowfullscreen=""></iframe> <iframe width="500" height="300" src="./PC - [Showcase] 1.3 Pumpkin_Frost Moon New Records Arena _ Terraria Community Forums_files/CSKnz_nb6fw.html" frameborder="0" allowfullscreen=""></iframe><br>
+<br>
+<span style="font-size: 22px">My Arena:<br>
+<img src="./PC - [Showcase] 1.3 Pumpkin_Frost Moon New Records Arena _ Terraria Community Forums_files/ODpCRRM.png" class="bbCodeImage LbImage" alt="[​IMG]" data-url="http://i.imgur.com/ODpCRRM.png" style=""> </span><br>
+<br>
+<img src="./PC - [Showcase] 1.3 Pumpkin_Frost Moon New Records Arena _ Terraria Community Forums_files/a80QCzM.png" class="bbCodeImage LbImage" alt="[​IMG]" data-url="http://i.imgur.com/a80QCzM.png" style=""><br>
+<br>
+<img src="./PC - [Showcase] 1.3 Pumpkin_Frost Moon New Records Arena _ Terraria Community Forums_files/2saUyF2.png" class="bbCodeImage LbImage" alt="[​IMG]" data-url="http://i.imgur.com/2saUyF2.png" style=""> <img src="./PC - [Showcase] 1.3 Pumpkin_Frost Moon New Records Arena _ Terraria Community Forums_files/JjLHcEw.png" class="bbCodeImage LbImage" alt="[​IMG]" data-url="http://i.imgur.com/JjLHcEw.png" style=""><br>
+<br>
+<br>
+You need a Raven Staff (or any kind of minion that cannot pass through blocks), and a Slimy Saddle for receiving invulnerability to dodge Ice Queen's attacks. After summoning two ravens into crab chamber, activate the dummy hoik engine (credit: <a href="https://forums.terraria.org/index.php?members/1706/" class="username" data-user="1706, @DicemanX">@DicemanX</a>) via the top right switch. You can collect boosters and replenish mana indefinitely without mana potion (credit: <a href="https://forums.terraria.org/index.php?members/36525/" class="username" data-user="36525, @blackshadowwind">@blackshadowwind</a>). You can stack 2 dummies in the same spot by pressing the switch on the bottom right (credit: <a href="https://forums.terraria.org/index.php?members/19464/" class="username" data-user="19464, @inomanoms">@inomanoms</a>). In order to receive complete invulnerability, you need to bounce off at least 2 dummies. The top left switch activates the spawn surfaces, and the bottom left switch lets you teleport back to the base.<br>
+<br>
+My goal was to spawn Pumpkings and Ice Queens as far as possible and make them form a straight line, so that I can kill them before they reach me. I came up with this setup thanks to <a href="https://www.youtube.com/channel/UCpTr94fA0e1HJEopg0XrOxQ" target="_blank" class="externalLink" rel="nofollow">Umami Ayataka</a>, who is the first to bring up the idea of setting the spawn surfaces diagonally beneath the player in <a href="https://www.youtube.com/watch?v=WGtvvLryCy0" target="_blank" class="externalLink" rel="nofollow">his (or her) video</a>. What I did in addition was block unnecessary spawn surfaces with lava, so that mobs can spawn only from 72 tiles to 84 tiles away.<br>
+<br>
+It works perfectly for Pumpkin moon. If you're careful, Pumpkings never reach you even when you have to reload the Last Prism (which lasts only a minute in a continuous way). If you get extremely lucky, you might able to reach final wave before 8:00 pm. It's just a matter of when and how many Mourning Woods spawn from wave 4, and Pumpkings from wave 7.<br>
+<br>
+What troubles me is Ice Queen, for she seems to gradually evade the Last Prism's ray. You can check it in my videos that Ice Queen tries to pass beneath the player if you keep hitting her from the moment she spawned, otherwise she tries to passes through (or even over) the player. So you need to shift the ray down a bit to kill her within the staircase, and which means you can't kill multiple Ice Queens within the staircase unless they are overlapping, or at least fairly close to each other.<br>
+I used Slimy Saddle invulnerability machine, to dodge attacks from Ice Queen I failed to kill within the staircase and not to freeze. <span style="text-decoration: line-through">You have to be careful when you kill her within the staircase while you already have one flying overhead. If you shift the ray down too much, you hit the dummy and your invulnerability frame breaks off (Like 6:32 and 9:28 of my video)</span>. Thanks to the indication of <a href="https://forums.terraria.org/index.php?members/32714/" class="username" data-user="32714, @stefnotch">@stefnotch</a> and <a href="https://forums.terraria.org/index.php?members/19464/" class="username" data-user="19464, @inomanoms">@inomanoms</a> in <a href="http://forums.terraria.org/index.php?threads/thoughts-on-dummy-engineering-updated-1-2-16.39796/" class="internalLink">this thread</a>, I can now stack 2 dummies in the exact same spot. No need to worry about too much shifting anymore!<img src="./PC - [Showcase] 1.3 Pumpkin_Frost Moon New Records Arena _ Terraria Community Forums_files/happy.png" class="mceSmilie" alt=":happy:" title="Happy    :happy:"><br>
+<br>
+<br>
+Oh and sorry for my bad English. It's not my first language so please bear with me.
+<div class="messageTextEndMarker">&nbsp;</div>
+</blockquote>
+</article>
+</div>
+<div class="editDate">
+Last edited: <span class="DateTime" title="Jun 4, 2016 at 4:25 AM">Jun 4, 2016</span>
+</div>
+<div id="likes-post-882348">
+<div class="likesSummary secondaryContent">
+<span class="LikeText">
+<a href="https://forums.terraria.org/index.php?members/aeoniceclipse.26752/" class="username" dir="auto">AeonicEclipse</a>, <a href="https://forums.terraria.org/index.php?members/zerogravitas.96/" class="username" dir="auto">ZeroGravitas</a>, <a href="https://forums.terraria.org/index.php?members/bahamut2001.34643/" class="username" dir="auto">Bahamut2001</a> and <a href="https://forums.terraria.org/index.php?posts/882348/likes" class="OverlayTrigger">11 others</a> like this.
+</span>
+</div>
+</div>
+</div>
+<div class="messageMeta ToggleTriggerAnchor">
+<div class="privateControls">
+<span class="item muted">
+<span class="authorEnd"><a href="https://forums.terraria.org/index.php?members/mappygaming.43152/" class="username author" dir="auto">MappyGaming</a>,</span>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/" title="Permalink" class="datePermalink"><span class="DateTime" title="Jan 26, 2016 at 3:18 PM">Jan 26, 2016</span></a>
+</span>
+<a href="https://forums.terraria.org/index.php?posts/882348/report" class="OverlayTrigger item control report" data-cacheoverlay="false"><span></span>Report</a>
+</div>
+<div class="publicControls">
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="index.php?posts/882348/permalink">#1</a>
+<a href="https://forums.terraria.org/index.php?posts/882348/like" class="LikeLink item control like" data-container="#likes-post-882348"><span></span><span class="LikeLabel">Like</span></a>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/reply&amp;quote=882348" data-messageid="882348" class="MultiQuoteControl JsOnly item control" title="Toggle Multi-Quote"><span></span><span class="symbol">+ Quote</span></a>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/reply&amp;quote=882348" data-posturl="index.php?posts/882348/quote" data-tip="#MQ-882348" class="ReplyQuote item control reply" title="Reply, quoting this message"><span></span>Reply</a>
+</div>
+</div>
+</li>
+<li id="post-882462" class="message   " data-author="Drodin">
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">
+<div class="messageUserBlock ">
+<div class="avatarHolder">
+<span class="helper"></span>
+<a href="https://forums.terraria.org/index.php?members/drodin.23631/" class="avatar Av23631m" data-avatarhtml="true"><img src="./PC - [Showcase] 1.3 Pumpkin_Frost Moon New Records Arena _ Terraria Community Forums_files/23631.jpg" width="96" height="96" alt="Drodin"></a>
+
+</div>
+<h3 class="userText">
+<a href="https://forums.terraria.org/index.php?members/drodin.23631/" class="username" dir="auto" itemprop="name">Drodin</a>
+<em class="userTitle" itemprop="title" style="background:url(&#39;/assets/ribbons/steampunker.png&#39;);">
+Steampunker
+</em>
+
+</h3>
+<div class="extraUserInfo">
+<dl class="conversationPostBitContainer">
+<a class="conversationPostBitLink" href="https://forums.terraria.org/index.php?conversations/add&amp;to=Drodin"><span class="conversationPostBitText">Start a Conversation</span></a>
+</dl>
+</div>
+<span class="arrow"><span></span></span>
+</div>
+</div>
+<div class="messageInfo primaryContent">
+<div class="messageContent">
+<article>
+<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+What is interesting is that this method caps the item limit over and over. If you watch the video, items disappear even as the lava burns off the non-essentials (wood, hearts, etc.). From the YouTube comments with DicemanX, 144 plat a night is your current cap—this could be the cap in profits off Pumpkin Moon. Outstanding machine. Thanks for sharing.
+<div class="messageTextEndMarker">&nbsp;</div>
+</blockquote>
+</article>
+</div>
+<div id="likes-post-882462">
+<div class="likesSummary secondaryContent">
+<span class="LikeText">
+<a href="https://forums.terraria.org/index.php?members/mappygaming.43152/" class="username" dir="auto">MappyGaming</a> likes this.
+</span>
+</div>
+</div>
+</div>
+<div class="messageMeta ToggleTriggerAnchor">
+<div class="privateControls">
+<span class="item muted">
+<span class="authorEnd"><a href="https://forums.terraria.org/index.php?members/drodin.23631/" class="username author" dir="auto">Drodin</a>,</span>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/#post-882462" title="Permalink" class="datePermalink"><span class="DateTime" title="Jan 26, 2016 at 5:11 PM">Jan 26, 2016</span></a>
+</span>
+<a href="https://forums.terraria.org/index.php?posts/882462/report" class="OverlayTrigger item control report" data-cacheoverlay="false"><span></span>Report</a>
+</div>
+<div class="publicControls">
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/#post-882462" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="index.php?posts/882462/permalink">#2</a>
+<a href="https://forums.terraria.org/index.php?posts/882462/like" class="LikeLink item control like" data-container="#likes-post-882462"><span></span><span class="LikeLabel">Like</span></a>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/reply&amp;quote=882462" data-messageid="882462" class="MultiQuoteControl JsOnly item control" title="Toggle Multi-Quote"><span></span><span class="symbol">+ Quote</span></a>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/reply&amp;quote=882462" data-posturl="index.php?posts/882462/quote" data-tip="#MQ-882462" class="ReplyQuote item control reply" title="Reply, quoting this message"><span></span>Reply</a>
+</div>
+</div>
+</li>
+<li id="post-883168" class="message   " data-author="Porky Minch">
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">
+<div class="messageUserBlock ">
+<div class="avatarHolder">
+<span class="helper"></span>
+<a href="https://forums.terraria.org/index.php?members/porky-minch.19287/" class="avatar Av19287m" data-avatarhtml="true"><img src="./PC - [Showcase] 1.3 Pumpkin_Frost Moon New Records Arena _ Terraria Community Forums_files/19287.jpg" width="96" height="96" alt="Porky Minch"></a>
+
+</div>
+<h3 class="userText">
+<a href="https://forums.terraria.org/index.php?members/porky-minch.19287/" class="username" dir="auto" itemprop="name">Porky Minch</a>
+<em class="userTitle noBackground" itemprop="title" data-title="Terrarian">
+Terrarian
+</em>
+
+</h3>
+<div class="extraUserInfo">
+<dl class="conversationPostBitContainer">
+<a class="conversationPostBitLink" href="https://forums.terraria.org/index.php?conversations/add&amp;to=Porky+Minch"><span class="conversationPostBitText">Start a Conversation</span></a>
+</dl>
+</div>
+<span class="arrow"><span></span></span>
+</div>
+</div>
+<div class="messageInfo primaryContent">
+<div class="messageContent">
+<article>
+<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+Wow, great work! I wish I was that good at creating farms and arenas, because I really suck at it. Also, seeing that slime invincibility got me thinking about another playthrough type - The coward! He has little to no armour, uses as many cheap tactics as possible such as invincibility and running/hiding against bosses, and has severely underpowered weapons. That could be interesting to try out some time.<br>
+<br>
+Oh and also, your English is just fine! Probably even better than a lot of the posts I've seen before <img src="./PC - [Showcase] 1.3 Pumpkin_Frost Moon New Records Arena _ Terraria Community Forums_files/clear.png" class="mceSmilieSprite mceSmilie7" alt=":p" title="Tongue    :p">
+<div class="messageTextEndMarker">&nbsp;</div>
+</blockquote>
+</article>
+</div>
+<div id="likes-post-883168">
+<div class="likesSummary secondaryContent">
+<span class="LikeText">
+<a href="https://forums.terraria.org/index.php?members/mappygaming.43152/" class="username" dir="auto">MappyGaming</a> likes this.
+</span>
+</div>
+</div>
+</div>
+<div class="messageMeta ToggleTriggerAnchor">
+<div class="privateControls">
+<span class="item muted">
+<span class="authorEnd"><a href="https://forums.terraria.org/index.php?members/porky-minch.19287/" class="username author" dir="auto">Porky Minch</a>,</span>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/#post-883168" title="Permalink" class="datePermalink"><span class="DateTime" title="Jan 27, 2016 at 3:45 AM">Jan 27, 2016</span></a>
+</span>
+<a href="https://forums.terraria.org/index.php?posts/883168/report" class="OverlayTrigger item control report" data-cacheoverlay="false"><span></span>Report</a>
+</div>
+<div class="publicControls">
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/#post-883168" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="index.php?posts/883168/permalink">#3</a>
+<a href="https://forums.terraria.org/index.php?posts/883168/like" class="LikeLink item control like" data-container="#likes-post-883168"><span></span><span class="LikeLabel">Like</span></a>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/reply&amp;quote=883168" data-messageid="883168" class="MultiQuoteControl JsOnly item control" title="Toggle Multi-Quote"><span></span><span class="symbol">+ Quote</span></a>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/reply&amp;quote=883168" data-posturl="index.php?posts/883168/quote" data-tip="#MQ-883168" class="ReplyQuote item control reply" title="Reply, quoting this message"><span></span>Reply</a>
+</div>
+</div>
+</li>
+<li id="post-951202" class="message   " data-author="ED209">
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">
+<div class="messageUserBlock ">
+<div class="avatarHolder">
+<span class="helper"></span>
+<a href="https://forums.terraria.org/index.php?members/ed209.25268/" class="avatar Av25268m" data-avatarhtml="true"><img src="./PC - [Showcase] 1.3 Pumpkin_Frost Moon New Records Arena _ Terraria Community Forums_files/25268.jpg" width="96" height="96" alt="ED209"></a>
+
+</div>
+<h3 class="userText">
+<a href="https://forums.terraria.org/index.php?members/ed209.25268/" class="username" dir="auto" itemprop="name">ED209</a>
+<em class="userTitle" itemprop="title" style="background:url(&#39;/assets/ribbons/plantera.png&#39;);">
+Plantera
+</em>
+
+</h3>
+<div class="extraUserInfo">
+<dl class="conversationPostBitContainer">
+<a class="conversationPostBitLink" href="https://forums.terraria.org/index.php?conversations/add&amp;to=ED209"><span class="conversationPostBitText">Start a Conversation</span></a>
+</dl>
+</div>
+<span class="arrow"><span></span></span>
+</div>
+</div>
+<div class="messageInfo primaryContent">
+<div class="messageContent">
+<article>
+<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+Really great machine you've made! What stops mobs spawning on the blocks above the lava on the staircase?
+<div class="messageTextEndMarker">&nbsp;</div>
+</blockquote>
+</article>
+</div>
+<div id="likes-post-951202">
+<div class="likesSummary secondaryContent">
+<span class="LikeText">
+<a href="https://forums.terraria.org/index.php?members/mappygaming.43152/" class="username" dir="auto">MappyGaming</a> likes this.
+</span>
+</div>
+</div>
+</div>
+<div class="messageMeta ToggleTriggerAnchor">
+<div class="privateControls">
+<span class="item muted">
+<span class="authorEnd"><a href="https://forums.terraria.org/index.php?members/ed209.25268/" class="username author" dir="auto">ED209</a>,</span>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/#post-951202" title="Permalink" class="datePermalink"><span class="DateTime" title="Apr 11, 2016 at 6:17 PM">Apr 11, 2016</span></a>
+</span>
+<a href="https://forums.terraria.org/index.php?posts/951202/report" class="OverlayTrigger item control report" data-cacheoverlay="false"><span></span>Report</a>
+</div>
+<div class="publicControls">
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/#post-951202" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="index.php?posts/951202/permalink">#4</a>
+<a href="https://forums.terraria.org/index.php?posts/951202/like" class="LikeLink item control like" data-container="#likes-post-951202"><span></span><span class="LikeLabel">Like</span></a>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/reply&amp;quote=951202" data-messageid="951202" class="MultiQuoteControl JsOnly item control" title="Toggle Multi-Quote"><span></span><span class="symbol">+ Quote</span></a>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/reply&amp;quote=951202" data-posturl="index.php?posts/951202/quote" data-tip="#MQ-951202" class="ReplyQuote item control reply" title="Reply, quoting this message"><span></span>Reply</a>
+</div>
+</div>
+</li>
+<li id="post-951504" class="message   " data-author="Porky Minch">
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">
+<div class="messageUserBlock ">
+<div class="avatarHolder">
+<span class="helper"></span>
+<a href="https://forums.terraria.org/index.php?members/porky-minch.19287/" class="avatar Av19287m" data-avatarhtml="true"><img src="./PC - [Showcase] 1.3 Pumpkin_Frost Moon New Records Arena _ Terraria Community Forums_files/19287.jpg" width="96" height="96" alt="Porky Minch"></a>
+
+</div>
+<h3 class="userText">
+<a href="https://forums.terraria.org/index.php?members/porky-minch.19287/" class="username" dir="auto" itemprop="name">Porky Minch</a>
+<em class="userTitle noBackground" itemprop="title" data-title="Terrarian">
+Terrarian
+</em>
+
+</h3>
+<div class="extraUserInfo">
+<dl class="conversationPostBitContainer">
+<a class="conversationPostBitLink" href="https://forums.terraria.org/index.php?conversations/add&amp;to=Porky+Minch"><span class="conversationPostBitText">Start a Conversation</span></a>
+</dl>
+</div>
+<span class="arrow"><span></span></span>
+</div>
+</div>
+<div class="messageInfo primaryContent">
+<div class="messageContent">
+<article>
+<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+<div class="bbCodeBlock bbCodeQuote" data-author="ED209">
+<aside>
+<div class="attribution type">ED209 said:
+<a href="https://forums.terraria.org/index.php?goto/post&amp;id=951202#post-951202" class="AttributionLink">↑</a>
+</div>
+<blockquote class="quoteContainer"><div class="quote">What stops mobs spawning on the blocks above the lava on the staircase?</div><div class="quoteExpand">Click to expand...</div></blockquote>
+</aside>
+</div>They're bubble blocks, the only thing that can actually touch them are liquids. Since they aren't solid blocks, mobs won't spawn on them.<br>
+<br>
+Or at least it's something along those lines....
+<div class="messageTextEndMarker">&nbsp;</div>
+</blockquote>
+</article>
+
+</div>
+<div id="likes-post-951504">
+<div class="likesSummary secondaryContent">
+<span class="LikeText">
+<a href="https://forums.terraria.org/index.php?members/mappygaming.43152/" class="username" dir="auto">MappyGaming</a> likes this.
+</span>
+</div>
+</div>
+</div>
+<div class="messageMeta ToggleTriggerAnchor">
+<div class="privateControls">
+<span class="item muted">
+<span class="authorEnd"><a href="https://forums.terraria.org/index.php?members/porky-minch.19287/" class="username author" dir="auto">Porky Minch</a>,</span>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/#post-951504" title="Permalink" class="datePermalink"><span class="DateTime" title="Apr 12, 2016 at 4:11 AM">Apr 12, 2016</span></a>
+</span>
+<a href="https://forums.terraria.org/index.php?posts/951504/report" class="OverlayTrigger item control report" data-cacheoverlay="false"><span></span>Report</a>
+</div>
+<div class="publicControls">
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/#post-951504" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="index.php?posts/951504/permalink">#5</a>
+<a href="https://forums.terraria.org/index.php?posts/951504/like" class="LikeLink item control like" data-container="#likes-post-951504"><span></span><span class="LikeLabel">Like</span></a>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/reply&amp;quote=951504" data-messageid="951504" class="MultiQuoteControl JsOnly item control" title="Toggle Multi-Quote"><span></span><span class="symbol">+ Quote</span></a>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/reply&amp;quote=951504" data-posturl="index.php?posts/951504/quote" data-tip="#MQ-951504" class="ReplyQuote item control reply" title="Reply, quoting this message"><span></span>Reply</a>
+</div>
+</div>
+</li>
+<li id="post-951621" class="message   " data-author="ED209">
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">
+<div class="messageUserBlock ">
+<div class="avatarHolder">
+<span class="helper"></span>
+<a href="https://forums.terraria.org/index.php?members/ed209.25268/" class="avatar Av25268m" data-avatarhtml="true"><img src="./PC - [Showcase] 1.3 Pumpkin_Frost Moon New Records Arena _ Terraria Community Forums_files/25268.jpg" width="96" height="96" alt="ED209"></a>
+
+</div>
+<h3 class="userText">
+<a href="https://forums.terraria.org/index.php?members/ed209.25268/" class="username" dir="auto" itemprop="name">ED209</a>
+<em class="userTitle" itemprop="title" style="background:url(&#39;/assets/ribbons/plantera.png&#39;);">
+Plantera
+</em>
+
+</h3>
+<div class="extraUserInfo">
+<dl class="conversationPostBitContainer">
+<a class="conversationPostBitLink" href="https://forums.terraria.org/index.php?conversations/add&amp;to=ED209"><span class="conversationPostBitText">Start a Conversation</span></a>
+</dl>
+</div>
+<span class="arrow"><span></span></span>
+</div>
+</div>
+<div class="messageInfo primaryContent">
+<div class="messageContent">
+<article>
+<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+<div class="bbCodeBlock bbCodeQuote" data-author="Porky Minch">
+<aside>
+<div class="attribution type">Porky Minch said:
+<a href="https://forums.terraria.org/index.php?goto/post&amp;id=951504#post-951504" class="AttributionLink">↑</a>
+</div>
+<blockquote class="quoteContainer"><div class="quote">They're bubble blocks, the only thing that can actually touch them are liquids. Since they aren't solid blocks, mobs won't spawn on them.<br>
+<br>
+Or at least it's something along those lines....</div><div class="quoteExpand">Click to expand...</div></blockquote>
+</aside>
+</div>So they act like background objects, except for liquids?
+<div class="messageTextEndMarker">&nbsp;</div>
+</blockquote>
+</article>
+</div>
+<div id="likes-post-951621"></div>
+</div>
+<div class="messageMeta ToggleTriggerAnchor">
+<div class="privateControls">
+<span class="item muted">
+<span class="authorEnd"><a href="https://forums.terraria.org/index.php?members/ed209.25268/" class="username author" dir="auto">ED209</a>,</span>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/#post-951621" title="Permalink" class="datePermalink"><span class="DateTime" title="Apr 12, 2016 at 10:52 AM">Apr 12, 2016</span></a>
+</span>
+<a href="https://forums.terraria.org/index.php?posts/951621/report" class="OverlayTrigger item control report" data-cacheoverlay="false"><span></span>Report</a>
+</div>
+<div class="publicControls">
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/#post-951621" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="index.php?posts/951621/permalink">#6</a>
+<a href="https://forums.terraria.org/index.php?posts/951621/like" class="LikeLink item control like" data-container="#likes-post-951621"><span></span><span class="LikeLabel">Like</span></a>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/reply&amp;quote=951621" data-messageid="951621" class="MultiQuoteControl JsOnly item control" title="Toggle Multi-Quote"><span></span><span class="symbol">+ Quote</span></a>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/reply&amp;quote=951621" data-posturl="index.php?posts/951621/quote" data-tip="#MQ-951621" class="ReplyQuote item control reply" title="Reply, quoting this message"><span></span>Reply</a>
+</div>
+</div>
+</li>
+<li id="post-951695" class="message   " data-author="MappyGaming">
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">
+<div class="messageUserBlock ">
+<div class="avatarHolder">
+<span class="helper"></span>
+<a href="https://forums.terraria.org/index.php?members/mappygaming.43152/" class="avatar Av43152m" data-avatarhtml="true"><img src="./PC - [Showcase] 1.3 Pumpkin_Frost Moon New Records Arena _ Terraria Community Forums_files/43152.jpg" width="96" height="96" alt="MappyGaming"></a>
+
+</div>
+<h3 class="userText">
+<a href="https://forums.terraria.org/index.php?members/mappygaming.43152/" class="username" dir="auto" itemprop="name">MappyGaming</a>
+<em class="userTitle" itemprop="title" style="background:url(&#39;/assets/ribbons/plantera.png&#39;);">
+Plantera
+</em>
+
+</h3>
+<div class="extraUserInfo">
+<dl class="conversationPostBitContainer">
+<a class="conversationPostBitLink" href="https://forums.terraria.org/index.php?conversations/add&amp;to=MappyGaming"><span class="conversationPostBitText">Start a Conversation</span></a>
+</dl>
+</div>
+<span class="arrow"><span></span></span>
+</div>
+</div>
+<div class="messageInfo primaryContent">
+<div class="messageContent">
+<article>
+<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+<div class="bbCodeBlock bbCodeQuote" data-author="ED209">
+<aside>
+<div class="attribution type">ED209 said:
+<a href="https://forums.terraria.org/index.php?goto/post&amp;id=951202#post-951202" class="AttributionLink">↑</a>
+</div>
+<blockquote class="quoteContainer"><div class="quote">Really great machine you've made! What stops mobs spawning on the blocks above the lava on the staircase?</div><div class="quoteExpand">Click to expand...</div></blockquote>
+</aside>
+</div>Thanks! They are bubble blocks, as <a href="https://forums.terraria.org/index.php?members/19287/" class="username" data-user="19287, @Porky Minch">@Porky Minch</a> said.<br>
+<div class="bbCodeBlock bbCodeQuote" data-author="ED209">
+<aside>
+<div class="attribution type">ED209 said:
+<a href="https://forums.terraria.org/index.php?goto/post&amp;id=951621#post-951621" class="AttributionLink">↑</a>
+</div>
+<blockquote class="quoteContainer"><div class="quote">So they act like background objects, except for liquids?</div><div class="quoteExpand">Click to expand...</div></blockquote>
+</aside>
+</div>I don't know if they actually are counted as background objects, but your understanding is most likely correct.
+<div class="messageTextEndMarker">&nbsp;</div>
+</blockquote>
+</article>
+</div>
+<div class="editDate">
+Last edited: <span class="DateTime" title="Apr 13, 2016 at 1:12 PM">Apr 13, 2016</span>
+</div>
+<div id="likes-post-951695">
+<div class="likesSummary secondaryContent">
+<span class="LikeText">
+<a href="https://forums.terraria.org/index.php?members/spazitnazer.98788/" class="username" dir="auto">Spazitnazer</a> likes this.
+</span>
+</div>
+</div>
+</div>
+<div class="messageMeta ToggleTriggerAnchor">
+<div class="privateControls">
+<span class="item muted">
+<span class="authorEnd"><a href="https://forums.terraria.org/index.php?members/mappygaming.43152/" class="username author" dir="auto">MappyGaming</a>,</span>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/#post-951695" title="Permalink" class="datePermalink"><span class="DateTime" title="Apr 12, 2016 at 1:41 PM">Apr 12, 2016</span></a>
+</span>
+<a href="https://forums.terraria.org/index.php?posts/951695/report" class="OverlayTrigger item control report" data-cacheoverlay="false"><span></span>Report</a>
+</div>
+<div class="publicControls">
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/#post-951695" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="index.php?posts/951695/permalink">#7</a>
+<a href="https://forums.terraria.org/index.php?posts/951695/like" class="LikeLink item control like" data-container="#likes-post-951695"><span></span><span class="LikeLabel">Like</span></a>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/reply&amp;quote=951695" data-messageid="951695" class="MultiQuoteControl JsOnly item control" title="Toggle Multi-Quote"><span></span><span class="symbol">+ Quote</span></a>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/reply&amp;quote=951695" data-posturl="index.php?posts/951695/quote" data-tip="#MQ-951695" class="ReplyQuote item control reply" title="Reply, quoting this message"><span></span>Reply</a>
+</div>
+</div>
+</li>
+<li id="post-951739" class="message   " data-author="ED209">
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">
+<div class="messageUserBlock ">
+<div class="avatarHolder">
+<span class="helper"></span>
+<a href="https://forums.terraria.org/index.php?members/ed209.25268/" class="avatar Av25268m" data-avatarhtml="true"><img src="./PC - [Showcase] 1.3 Pumpkin_Frost Moon New Records Arena _ Terraria Community Forums_files/25268.jpg" width="96" height="96" alt="ED209"></a>
+
+</div>
+<h3 class="userText">
+<a href="https://forums.terraria.org/index.php?members/ed209.25268/" class="username" dir="auto" itemprop="name">ED209</a>
+<em class="userTitle" itemprop="title" style="background:url(&#39;/assets/ribbons/plantera.png&#39;);">
+Plantera
+</em>
+
+</h3>
+<div class="extraUserInfo">
+<dl class="conversationPostBitContainer">
+<a class="conversationPostBitLink" href="https://forums.terraria.org/index.php?conversations/add&amp;to=ED209"><span class="conversationPostBitText">Start a Conversation</span></a>
+</dl>
+</div>
+<span class="arrow"><span></span></span>
+</div>
+</div>
+<div class="messageInfo primaryContent">
+<div class="messageContent">
+<article>
+<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+<div class="bbCodeBlock bbCodeQuote" data-author="terramappy">
+<aside>
+<div class="attribution type">terramappy said:
+<a href="https://forums.terraria.org/index.php?goto/post&amp;id=951695#post-951695" class="AttributionLink">↑</a>
+</div>
+<blockquote class="quoteContainer"><div class="quote">Thanks! They are bubble blocks, as <a href="https://forums.terraria.org/index.php?members/19287/" class="username" data-user="19287, @Porky Minch">@Porky Minch</a> said.<br>
+<br>
+I don't know if they actually count as background objects, but your understanding is most likely correct.</div><div class="quoteExpand">Click to expand...</div></blockquote>
+</aside>
+</div>I wish we had those on console, they'd come in handy...
+<div class="messageTextEndMarker">&nbsp;</div>
+</blockquote>
+</article>
+</div>
+<div id="likes-post-951739">
+<div class="likesSummary secondaryContent">
+<span class="LikeText">
+<a href="https://forums.terraria.org/index.php?members/spazitnazer.98788/" class="username" dir="auto">Spazitnazer</a> likes this.
+</span>
+</div>
+</div>
+</div>
+<div class="messageMeta ToggleTriggerAnchor">
+<div class="privateControls">
+<span class="item muted">
+<span class="authorEnd"><a href="https://forums.terraria.org/index.php?members/ed209.25268/" class="username author" dir="auto">ED209</a>,</span>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/#post-951739" title="Permalink" class="datePermalink"><span class="DateTime" title="Apr 12, 2016 at 3:09 PM">Apr 12, 2016</span></a>
+</span>
+<a href="https://forums.terraria.org/index.php?posts/951739/report" class="OverlayTrigger item control report" data-cacheoverlay="false"><span></span>Report</a>
+</div>
+<div class="publicControls">
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/#post-951739" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="index.php?posts/951739/permalink">#8</a>
+<a href="https://forums.terraria.org/index.php?posts/951739/like" class="LikeLink item control like" data-container="#likes-post-951739"><span></span><span class="LikeLabel">Like</span></a>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/reply&amp;quote=951739" data-messageid="951739" class="MultiQuoteControl JsOnly item control" title="Toggle Multi-Quote"><span></span><span class="symbol">+ Quote</span></a>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/reply&amp;quote=951739" data-posturl="index.php?posts/951739/quote" data-tip="#MQ-951739" class="ReplyQuote item control reply" title="Reply, quoting this message"><span></span>Reply</a>
+</div>
+</div>
+</li>
+<li id="post-954318" class="message   " data-author="AeonicEclipse">
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">
+<div class="messageUserBlock ">
+<div class="avatarHolder">
+<span class="helper"></span>
+<a href="https://forums.terraria.org/index.php?members/aeoniceclipse.26752/" class="avatar Av26752m" data-avatarhtml="true"><img src="./PC - [Showcase] 1.3 Pumpkin_Frost Moon New Records Arena _ Terraria Community Forums_files/26752.jpg" width="96" height="96" alt="AeonicEclipse"></a>
+
+</div>
+<h3 class="userText">
+<a href="https://forums.terraria.org/index.php?members/aeoniceclipse.26752/" class="username" dir="auto" itemprop="name">AeonicEclipse</a>
+<em class="userTitle noBackground" itemprop="title" data-title="Terrarian">
+Terrarian
+</em>
+
+</h3>
+<div class="extraUserInfo">
+<dl class="conversationPostBitContainer">
+<a class="conversationPostBitLink" href="https://forums.terraria.org/index.php?conversations/add&amp;to=AeonicEclipse"><span class="conversationPostBitText">Start a Conversation</span></a>
+</dl>
+</div>
+<span class="arrow"><span></span></span>
+</div>
+</div>
+<div class="messageInfo primaryContent">
+<div class="messageContent">
+<article>
+<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+This is awesome stuff, nicely done.<br>
+<br>
+<div class="bbCodeBlock bbCodeQuote" data-author="terramappy">
+<aside>
+<div class="attribution type">terramappy said:
+<a href="https://forums.terraria.org/index.php?goto/post&amp;id=882348#post-882348" class="AttributionLink">↑</a>
+</div>
+<blockquote class="quoteContainer"><div class="quote">reload the Last Prism (which lasts only a minute in a continuous way)</div><div class="quoteExpand">Click to expand...</div></blockquote>
+</aside>
+</div>Odd thing this is though, I've run it quite past a minute. You're still holding and it just stops?
+<div class="messageTextEndMarker">&nbsp;</div>
+</blockquote>
+</article>
+</div>
+<div id="likes-post-954318">
+<div class="likesSummary secondaryContent">
+<span class="LikeText">
+<a href="https://forums.terraria.org/index.php?members/mappygaming.43152/" class="username" dir="auto">MappyGaming</a> likes this.
+</span>
+</div>
+</div>
+</div>
+<div class="messageMeta ToggleTriggerAnchor">
+<div class="privateControls">
+<span class="item muted">
+<span class="authorEnd"><a href="https://forums.terraria.org/index.php?members/aeoniceclipse.26752/" class="username author" dir="auto">AeonicEclipse</a>,</span>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/#post-954318" title="Permalink" class="datePermalink"><span class="DateTime" title="Apr 16, 2016 at 7:37 AM">Apr 16, 2016</span></a>
+</span>
+<a href="https://forums.terraria.org/index.php?posts/954318/report" class="OverlayTrigger item control report" data-cacheoverlay="false"><span></span>Report</a>
+</div>
+<div class="publicControls">
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/#post-954318" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="index.php?posts/954318/permalink">#9</a>
+<a href="https://forums.terraria.org/index.php?posts/954318/like" class="LikeLink item control like" data-container="#likes-post-954318"><span></span><span class="LikeLabel">Like</span></a>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/reply&amp;quote=954318" data-messageid="954318" class="MultiQuoteControl JsOnly item control" title="Toggle Multi-Quote"><span></span><span class="symbol">+ Quote</span></a>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/reply&amp;quote=954318" data-posturl="index.php?posts/954318/quote" data-tip="#MQ-954318" class="ReplyQuote item control reply" title="Reply, quoting this message"><span></span>Reply</a>
+</div>
+</div>
+</li>
+<li id="post-954449" class="message   " data-author="MappyGaming">
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">
+<div class="messageUserBlock ">
+<div class="avatarHolder">
+<span class="helper"></span>
+<a href="https://forums.terraria.org/index.php?members/mappygaming.43152/" class="avatar Av43152m" data-avatarhtml="true"><img src="./PC - [Showcase] 1.3 Pumpkin_Frost Moon New Records Arena _ Terraria Community Forums_files/43152.jpg" width="96" height="96" alt="MappyGaming"></a>
+
+ </div>
+<h3 class="userText">
+<a href="https://forums.terraria.org/index.php?members/mappygaming.43152/" class="username" dir="auto" itemprop="name">MappyGaming</a>
+<em class="userTitle" itemprop="title" style="background:url(&#39;/assets/ribbons/plantera.png&#39;);">
+Plantera
+</em>
+
+</h3>
+<div class="extraUserInfo">
+<dl class="conversationPostBitContainer">
+<a class="conversationPostBitLink" href="https://forums.terraria.org/index.php?conversations/add&amp;to=MappyGaming"><span class="conversationPostBitText">Start a Conversation</span></a>
+</dl>
+</div>
+<span class="arrow"><span></span></span>
+</div>
+</div>
+<div class="messageInfo primaryContent">
+<div class="messageContent">
+<article>
+<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+<div class="bbCodeBlock bbCodeQuote" data-author="AeonicEclipse">
+<aside>
+<div class="attribution type">AeonicEclipse said:
+<a href="https://forums.terraria.org/index.php?goto/post&amp;id=954318#post-954318" class="AttributionLink">↑</a>
+</div>
+<blockquote class="quoteContainer"><div class="quote">This is awesome stuff, nicely done.<br>
+<br>
+Odd thing this is though, I've run it quite past a minute. You're still holding and it just stops?</div><div class="quoteExpand">Click to expand...</div></blockquote>
+</aside>
+</div>Thanks! More precisely, you can keep holding it as long as you want to, but its ray turns off after a minute of continuous use and will continue to consume mana.<br>
+Here's a "little" gif to watch it in action:<br>
+<video class="gfyVid" preload="metadata" loop="" poster="http://thumbs.gfycat.com/FeistyAdmiredGoose-poster.jpg" autoplay="" controls="" data-gfyid="FeistyAdmiredGoose">
+</video><br>
+Do you happen to know a way to avoid it?
+<div class="messageTextEndMarker">&nbsp;</div>
+</blockquote>
+</article>
+</div>
+<div id="likes-post-954449"></div>
+</div>
+<div class="messageMeta ToggleTriggerAnchor">
+<div class="privateControls">
+<span class="item muted">
+<span class="authorEnd"><a href="https://forums.terraria.org/index.php?members/mappygaming.43152/" class="username author" dir="auto">MappyGaming</a>,</span>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/#post-954449" title="Permalink" class="datePermalink"><span class="DateTime" title="Apr 16, 2016 at 1:09 PM">Apr 16, 2016</span></a>
+</span>
+<a href="https://forums.terraria.org/index.php?posts/954449/report" class="OverlayTrigger item control report" data-cacheoverlay="false"><span></span>Report</a>
+</div>
+<div class="publicControls">
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/#post-954449" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="index.php?posts/954449/permalink">#10</a>
+<a href="https://forums.terraria.org/index.php?posts/954449/like" class="LikeLink item control like" data-container="#likes-post-954449"><span></span><span class="LikeLabel">Like</span></a>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/reply&amp;quote=954449" data-messageid="954449" class="MultiQuoteControl JsOnly item control" title="Toggle Multi-Quote"><span></span><span class="symbol">+ Quote</span></a>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/reply&amp;quote=954449" data-posturl="index.php?posts/954449/quote" data-tip="#MQ-954449" class="ReplyQuote item control reply" title="Reply, quoting this message"><span></span>Reply</a>
+</div>
+</div>
+</li>
+<li id="post-954662" class="message   " data-author="AeonicEclipse">
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">
+<div class="messageUserBlock ">
+<div class="avatarHolder">
+<span class="helper"></span>
+<a href="https://forums.terraria.org/index.php?members/aeoniceclipse.26752/" class="avatar Av26752m" data-avatarhtml="true"><img src="./PC - [Showcase] 1.3 Pumpkin_Frost Moon New Records Arena _ Terraria Community Forums_files/26752.jpg" width="96" height="96" alt="AeonicEclipse"></a>
+
+</div>
+<h3 class="userText">
+<a href="https://forums.terraria.org/index.php?members/aeoniceclipse.26752/" class="username" dir="auto" itemprop="name">AeonicEclipse</a>
+<em class="userTitle noBackground" itemprop="title" data-title="Terrarian">
+Terrarian
+</em>
+
+</h3>
+<div class="extraUserInfo">
+<dl class="conversationPostBitContainer">
+<a class="conversationPostBitLink" href="https://forums.terraria.org/index.php?conversations/add&amp;to=AeonicEclipse"><span class="conversationPostBitText">Start a Conversation</span></a>
+</dl>
+</div>
+<span class="arrow"><span></span></span>
+</div>
+</div>
+<div class="messageInfo primaryContent">
+<div class="messageContent">
+<article>
+<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+Wellll, had to re-test it to make sure I wasn't mistaken, but turns out, I was =( Sorry to be misleading. My star engine is star-statue-based still (really need to change that) because it's attached to the heart engine (not using invulnerability) so when it gets blocked, I have to move to get mob stars. Eventually it becomes useless... but anyway, having to move distracts me from the time, and firing failure apparently, so didn't notice it until this test.<br>
+<br>
+Update: Upon further testing with a similar crab machine, traps will also appear to generate stars with statue mobs. Oddity though, it's not consistent (with one statue at least). On occasion I ran out of mana and killed 4-6 before getting a star. Had the same thing happen with a minion though, so not sure what the deal is.<br>
+Update 2: And apparently lava too, in a thin layer, with similar inconsistency.
+<div class="messageTextEndMarker">&nbsp;</div>
+</blockquote>
+</article>
+</div>
+<div class="editDate">
+Last edited: <span class="DateTime" title="Apr 16, 2016 at 8:43 PM">Apr 16, 2016</span>
+</div>
+<div id="likes-post-954662"></div>
+</div>
+<div class="messageMeta ToggleTriggerAnchor">
+<div class="privateControls">
+<span class="item muted">
+<span class="authorEnd"><a href="https://forums.terraria.org/index.php?members/aeoniceclipse.26752/" class="username author" dir="auto">AeonicEclipse</a>,</span>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/#post-954662" title="Permalink" class="datePermalink"><span class="DateTime" title="Apr 16, 2016 at 5:31 PM">Apr 16, 2016</span></a>
+</span>
+<a href="https://forums.terraria.org/index.php?posts/954662/report" class="OverlayTrigger item control report" data-cacheoverlay="false"><span></span>Report</a>
+</div>
+<div class="publicControls">
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/#post-954662" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="index.php?posts/954662/permalink">#11</a>
+<a href="https://forums.terraria.org/index.php?posts/954662/like" class="LikeLink item control like" data-container="#likes-post-954662"><span></span><span class="LikeLabel">Like</span></a>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/reply&amp;quote=954662" data-messageid="954662" class="MultiQuoteControl JsOnly item control" title="Toggle Multi-Quote"><span></span><span class="symbol">+ Quote</span></a>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/reply&amp;quote=954662" data-posturl="index.php?posts/954662/quote" data-tip="#MQ-954662" class="ReplyQuote item control reply" title="Reply, quoting this message"><span></span>Reply</a>
+</div>
+</div>
+</li>
+<li id="post-955224" class="message   " data-author="MappyGaming">
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">
+<div class="messageUserBlock ">
+<div class="avatarHolder">
+<span class="helper"></span>
+<a href="https://forums.terraria.org/index.php?members/mappygaming.43152/" class="avatar Av43152m" data-avatarhtml="true"><img src="./PC - [Showcase] 1.3 Pumpkin_Frost Moon New Records Arena _ Terraria Community Forums_files/43152.jpg" width="96" height="96" alt="MappyGaming"></a>
+
+</div>
+<h3 class="userText">
+<a href="https://forums.terraria.org/index.php?members/mappygaming.43152/" class="username" dir="auto" itemprop="name">MappyGaming</a>
+<em class="userTitle" itemprop="title" style="background:url(&#39;/assets/ribbons/plantera.png&#39;);">
+Plantera
+</em>
+
+</h3>
+<div class="extraUserInfo">
+<dl class="conversationPostBitContainer">
+<a class="conversationPostBitLink" href="https://forums.terraria.org/index.php?conversations/add&amp;to=MappyGaming"><span class="conversationPostBitText">Start a Conversation</span></a>
+</dl>
+</div>
+<span class="arrow"><span></span></span>
+</div>
+</div>
+<div class="messageInfo primaryContent">
+<div class="messageContent">
+<article>
+<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+<div class="bbCodeBlock bbCodeQuote" data-author="AeonicEclipse">
+<aside>
+<div class="attribution type">AeonicEclipse said:
+<a href="https://forums.terraria.org/index.php?goto/post&amp;id=954662#post-954662" class="AttributionLink">↑</a>
+</div>
+<blockquote class="quoteContainer"><div class="quote">Sorry to be misleading.</div><div class="quoteExpand">Click to expand...</div></blockquote>
+</aside>
+</div>It's OK. I was just kinda hoping you've found a way to run it seamlessly because it has been ruining my potential record runs... but oh well.<img src="./PC - [Showcase] 1.3 Pumpkin_Frost Moon New Records Arena _ Terraria Community Forums_files/clear.png" class="mceSmilieSprite mceSmilie1" alt=":)" title="Smile    :)"> Perhaps there's no such way.<br>
+<br>
+<div class="bbCodeBlock bbCodeQuote" data-author="AeonicEclipse">
+<aside>
+<div class="attribution type">AeonicEclipse said:
+<a href="https://forums.terraria.org/index.php?goto/post&amp;id=954662#post-954662" class="AttributionLink">↑</a>
+</div>
+<blockquote class="quoteContainer"><div class="quote">Update: Upon further testing with a similar crab machine, traps will also appear to generate stars with statue mobs. Oddity though, it's not consistent (with one statue at least). On occasion I ran out of mana and killed 4-6 before getting a star. Had the same thing happen with a minion though, so not sure what the deal is.<br>
+Update 2: And apparently lava too, in a thin layer, with similar inconsistency.</div><div class="quoteExpand">Click to expand...</div></blockquote>
+</aside>
+</div>I have tested and it happened to me too. But oddly enough, I have never run out of mana with minion setup. I think further research is needed for this matter.
+<div class="messageTextEndMarker">&nbsp;</div>
+</blockquote>
+</article>
+</div>
+<div class="editDate">
+Last edited: <span class="DateTime" title="Apr 17, 2016 at 11:12 AM">Apr 17, 2016</span>
+</div>
+<div id="likes-post-955224">
+<div class="likesSummary secondaryContent">
+<span class="LikeText">
+<a href="https://forums.terraria.org/index.php?members/aeoniceclipse.26752/" class="username" dir="auto">AeonicEclipse</a> likes this.
+</span>
+</div>
+</div>
+</div>
+<div class="messageMeta ToggleTriggerAnchor">
+<div class="privateControls">
+<span class="item muted">
+<span class="authorEnd"><a href="https://forums.terraria.org/index.php?members/mappygaming.43152/" class="username author" dir="auto">MappyGaming</a>,</span>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/#post-955224" title="Permalink" class="datePermalink"><span class="DateTime" title="Apr 17, 2016 at 9:27 AM">Apr 17, 2016</span></a>
+</span>
+<a href="https://forums.terraria.org/index.php?posts/955224/report" class="OverlayTrigger item control report" data-cacheoverlay="false"><span></span>Report</a>
+</div>
+<div class="publicControls">
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/#post-955224" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="index.php?posts/955224/permalink">#12</a>
+<a href="https://forums.terraria.org/index.php?posts/955224/like" class="LikeLink item control like" data-container="#likes-post-955224"><span></span><span class="LikeLabel">Like</span></a>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/reply&amp;quote=955224" data-messageid="955224" class="MultiQuoteControl JsOnly item control" title="Toggle Multi-Quote"><span></span><span class="symbol">+ Quote</span></a>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/reply&amp;quote=955224" data-posturl="index.php?posts/955224/quote" data-tip="#MQ-955224" class="ReplyQuote item control reply" title="Reply, quoting this message"><span></span>Reply</a>
+</div>
+</div>
+</li>
+<li id="post-955443" class="message   " data-author="AeonicEclipse">
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">
+<div class="messageUserBlock ">
+<div class="avatarHolder">
+<span class="helper"></span>
+<a href="https://forums.terraria.org/index.php?members/aeoniceclipse.26752/" class="avatar Av26752m" data-avatarhtml="true"><img src="./PC - [Showcase] 1.3 Pumpkin_Frost Moon New Records Arena _ Terraria Community Forums_files/26752.jpg" width="96" height="96" alt="AeonicEclipse"></a>
+
+</div>
+<h3 class="userText">
+<a href="https://forums.terraria.org/index.php?members/aeoniceclipse.26752/" class="username" dir="auto" itemprop="name">AeonicEclipse</a>
+<em class="userTitle noBackground" itemprop="title" data-title="Terrarian">
+Terrarian
+</em>
+
+</h3>
+<div class="extraUserInfo">
+<dl class="conversationPostBitContainer">
+<a class="conversationPostBitLink" href="https://forums.terraria.org/index.php?conversations/add&amp;to=AeonicEclipse"><span class="conversationPostBitText">Start a Conversation</span></a>
+</dl>
+</div>
+<span class="arrow"><span></span></span>
+</div>
+</div>
+<div class="messageInfo primaryContent">
+<div class="messageContent">
+<article>
+<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+<div class="bbCodeBlock bbCodeQuote" data-author="terramappy">
+<aside>
+<div class="attribution type">terramappy said:
+<a href="https://forums.terraria.org/index.php?goto/post&amp;id=955224#post-955224" class="AttributionLink">↑</a>
+</div>
+<blockquote class="quoteContainer"><div class="quote">Perhaps there's no such way</div><div class="quoteExpand">Click to expand...</div></blockquote>
+</aside>
+</div>Aye, tis a bummer. The wiki isn't quite accurate to the weapon (still says super mana potions are the only effective way to continuously fire; HA, nope) but it does mention the beam-shut-off-still-spending-mana thing. Lunar flare is pretty sweet for the events too but not as epic, or crowd effective of course.<br>
+<br>
+<div class="bbCodeBlock bbCodeQuote" data-author="terramappy">
+<aside>
+<div class="attribution type">terramappy said:
+<a href="https://forums.terraria.org/index.php?goto/post&amp;id=955224#post-955224" class="AttributionLink">↑</a>
+</div>
+<blockquote class="quoteContainer"><div class="quote">I think further research is needed</div><div class="quoteExpand">Click to expand...</div></blockquote>
+</aside>
+</div>I've done some runs with 3 crab statues into the thin lava and I haven't run out it seems (though, to not mislead again, will test many more times). But it does seem to drop Nebula less often so will continue testing that part.
+<div class="messageTextEndMarker">&nbsp;</div>
+</blockquote>
+</article>
+</div>
+<div id="likes-post-955443"></div>
+</div>
+<div class="messageMeta ToggleTriggerAnchor">
+<div class="privateControls">
+<span class="item muted">
+<span class="authorEnd"><a href="https://forums.terraria.org/index.php?members/aeoniceclipse.26752/" class="username author" dir="auto">AeonicEclipse</a>,</span>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/#post-955443" title="Permalink" class="datePermalink"><span class="DateTime" title="Apr 17, 2016 at 3:02 PM">Apr 17, 2016</span></a>
+</span>
+<a href="https://forums.terraria.org/index.php?posts/955443/report" class="OverlayTrigger item control report" data-cacheoverlay="false"><span></span>Report</a>
+</div>
+<div class="publicControls">
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/#post-955443" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="index.php?posts/955443/permalink">#13</a>
+<a href="https://forums.terraria.org/index.php?posts/955443/like" class="LikeLink item control like" data-container="#likes-post-955443"><span></span><span class="LikeLabel">Like</span></a>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/reply&amp;quote=955443" data-messageid="955443" class="MultiQuoteControl JsOnly item control" title="Toggle Multi-Quote"><span></span><span class="symbol">+ Quote</span></a>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/reply&amp;quote=955443" data-posturl="index.php?posts/955443/quote" data-tip="#MQ-955443" class="ReplyQuote item control reply" title="Reply, quoting this message"><span></span>Reply</a>
+</div>
+</div>
+</li>
+<li id="post-955517" class="message   " data-author="MappyGaming">
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">
+<div class="messageUserBlock ">
+<div class="avatarHolder">
+<span class="helper"></span>
+<a href="https://forums.terraria.org/index.php?members/mappygaming.43152/" class="avatar Av43152m" data-avatarhtml="true"><img src="./PC - [Showcase] 1.3 Pumpkin_Frost Moon New Records Arena _ Terraria Community Forums_files/43152.jpg" width="96" height="96" alt="MappyGaming"></a>
+
+</div>
+<h3 class="userText">
+<a href="https://forums.terraria.org/index.php?members/mappygaming.43152/" class="username" dir="auto" itemprop="name">MappyGaming</a>
+<em class="userTitle" itemprop="title" style="background:url(&#39;/assets/ribbons/plantera.png&#39;);">
+Plantera
+</em>
+
+</h3>
+<div class="extraUserInfo">
+<dl class="conversationPostBitContainer">
+<a class="conversationPostBitLink" href="https://forums.terraria.org/index.php?conversations/add&amp;to=MappyGaming"><span class="conversationPostBitText">Start a Conversation</span></a>
+</dl>
+</div>
+<span class="arrow"><span></span></span>
+</div>
+</div>
+<div class="messageInfo primaryContent">
+<div class="messageContent">
+<article>
+<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+<div class="bbCodeBlock bbCodeQuote" data-author="AeonicEclipse">
+<aside>
+<div class="attribution type">AeonicEclipse said:
+<a href="https://forums.terraria.org/index.php?goto/post&amp;id=955443#post-955443" class="AttributionLink">↑</a>
+</div>
+<blockquote class="quoteContainer"><div class="quote">it does seem to drop Nebula less often so will continue testing that part.</div><div class="quoteExpand">Click to expand...</div></blockquote>
+</aside>
+</div>Boosters pop out only when you strike enemies with your weapon (minion included). So as for collecting boosters, traps and lava will do more harm than good.
+<div class="messageTextEndMarker">&nbsp;</div>
+</blockquote>
+</article>
+</div>
+<div id="likes-post-955517"></div>
+</div>
+<div class="messageMeta ToggleTriggerAnchor">
+<div class="privateControls">
+<span class="item muted">
+<span class="authorEnd"><a href="https://forums.terraria.org/index.php?members/mappygaming.43152/" class="username author" dir="auto">MappyGaming</a>,</span>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/#post-955517" title="Permalink" class="datePermalink"><span class="DateTime" title="Apr 17, 2016 at 4:38 PM">Apr 17, 2016</span></a>
+</span>
+<a href="https://forums.terraria.org/index.php?posts/955517/report" class="OverlayTrigger item control report" data-cacheoverlay="false"><span></span>Report</a>
+</div>
+<div class="publicControls">
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/#post-955517" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="index.php?posts/955517/permalink">#14</a>
+<a href="https://forums.terraria.org/index.php?posts/955517/like" class="LikeLink item control like" data-container="#likes-post-955517"><span></span><span class="LikeLabel">Like</span></a>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/reply&amp;quote=955517" data-messageid="955517" class="MultiQuoteControl JsOnly item control" title="Toggle Multi-Quote"><span></span><span class="symbol">+ Quote</span></a>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/reply&amp;quote=955517" data-posturl="index.php?posts/955517/quote" data-tip="#MQ-955517" class="ReplyQuote item control reply" title="Reply, quoting this message"><span></span>Reply</a>
+</div>
+</div>
+</li>
+<li id="post-1483666" class="message   " data-author="UranicPower6">
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">
+<div class="messageUserBlock ">
+<div class="avatarHolder">
+<span class="helper"></span>
+<a href="https://forums.terraria.org/index.php?members/uranicpower6.97948/" class="avatar Av97948m" data-avatarhtml="true"><img src="./PC - [Showcase] 1.3 Pumpkin_Frost Moon New Records Arena _ Terraria Community Forums_files/97948.jpg" width="96" height="96" alt="UranicPower6"></a>
+
+</div>
+<h3 class="userText">
+<a href="https://forums.terraria.org/index.php?members/uranicpower6.97948/" class="username" dir="auto" itemprop="name">UranicPower6</a>
+<em class="userTitle noBackground" itemprop="title" data-title="Terrarian">
+Terrarian
+</em>
+
+</h3>
+<div class="extraUserInfo">
+<dl class="conversationPostBitContainer">
+<a class="conversationPostBitLink" href="https://forums.terraria.org/index.php?conversations/add&amp;to=UranicPower6"><span class="conversationPostBitText">Start a Conversation</span></a>
+</dl>
+</div>
+<span class="arrow"><span></span></span>
+</div>
+</div>
+<div class="messageInfo primaryContent">
+<div class="messageContent">
+<article>
+<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+Hey Mappy, Does this still work? If so could you make a TEdit schematic of this farm?<img src="./PC - [Showcase] 1.3 Pumpkin_Frost Moon New Records Arena _ Terraria Community Forums_files/clear.png" class="mceSmilieSprite mceSmilie1" alt=":)" title="Smile    :)">
+<div class="messageTextEndMarker">&nbsp;</div>
+</blockquote>
+</article>
+</div>
+<div id="likes-post-1483666"></div>
+</div>
+<div class="messageMeta ToggleTriggerAnchor">
+<div class="privateControls">
+<span class="item muted">
+<span class="authorEnd"><a href="https://forums.terraria.org/index.php?members/uranicpower6.97948/" class="username author" dir="auto">UranicPower6</a>,</span>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/#post-1483666" title="Permalink" class="datePermalink"><span class="DateTime" title="Oct 29, 2017 at 10:23 PM">Oct 29, 2017</span></a>
+</span>
+<a href="https://forums.terraria.org/index.php?posts/1483666/report" class="OverlayTrigger item control report" data-cacheoverlay="false"><span></span>Report</a>
+</div>
+<div class="publicControls">
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/#post-1483666" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="index.php?posts/1483666/permalink">#15</a>
+<a href="https://forums.terraria.org/index.php?posts/1483666/like" class="LikeLink item control like" data-container="#likes-post-1483666"><span></span><span class="LikeLabel">Like</span></a>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/reply&amp;quote=1483666" data-messageid="1483666" class="MultiQuoteControl JsOnly item control" title="Toggle Multi-Quote"><span></span><span class="symbol">+ Quote</span></a>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/reply&amp;quote=1483666" data-posturl="index.php?posts/1483666/quote" data-tip="#MQ-1483666" class="ReplyQuote item control reply" title="Reply, quoting this message"><span></span>Reply</a>
+</div>
+</div>
+</li>
+<li id="post-1488482" class="message   " data-author="Spazitnazer">
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">
+<div class="messageUserBlock ">
+<div class="avatarHolder">
+<span class="helper"></span>
+<a href="https://forums.terraria.org/index.php?members/spazitnazer.98788/" class="avatar Av98788m" data-avatarhtml="true"><img src="./PC - [Showcase] 1.3 Pumpkin_Frost Moon New Records Arena _ Terraria Community Forums_files/98788.jpg" width="96" height="96" alt="Spazitnazer"></a>
+
+</div>
+<h3 class="userText">
+<a href="https://forums.terraria.org/index.php?members/spazitnazer.98788/" class="username" dir="auto" itemprop="name">Spazitnazer</a>
+<em class="userTitle noBackground" itemprop="title" data-title="Terrarian">
+Terrarian
+</em>
+
+</h3>
+<div class="extraUserInfo">
+<dl class="conversationPostBitContainer">
+<a class="conversationPostBitLink" href="https://forums.terraria.org/index.php?conversations/add&amp;to=Spazitnazer"><span class="conversationPostBitText">Start a Conversation</span></a>
+</dl>
+</div>
+<span class="arrow"><span></span></span>
+</div>
+</div>
+<div class="messageInfo primaryContent">
+<div class="messageContent">
+<article>
+<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+Can’t you set up hoiks to dump the useless items in the lava?<br>
+<div class="doublePost">
+<blockquote class="doublePostTagTextContainer">
+<span class="doublePostTagText">--- Double Post Merged, <span class="doublePostTimeStamp"><span class="DateTime" title="Nov 10, 2017 at 1:47 AM">Nov 10, 2017</span></span><span class="doublePostOriginalDateText">, Original Post Date: <span class="doublePostOriginalDate"><span class="DateTime" title="Nov 10, 2017 at 1:46 AM">Nov 10, 2017</span></span></span> ---</span>
+</blockquote>
+</div>
+<div class="bbCodeBlock bbCodeQuote" data-author="Spazitnazer">
+<aside>
+<div class="attribution type">Spazitnazer said:
+<a href="https://forums.terraria.org/index.php?goto/post&amp;id=1488482#post-1488482" class="AttributionLink">↑</a>
+</div>
+<blockquote class="quoteContainer"><div class="quote">Can’t you set up hoiks to dump the useless items in the lava?</div><div class="quoteExpand">Click to expand...</div></blockquote>
+</aside>
+</div>Or hoik the ENEMIES up to you to get extra damage from traps or bubbled lava?
+<div class="messageTextEndMarker">&nbsp;</div>
+</blockquote>
+</article>
+</div>
+<div id="likes-post-1488482"></div>
+</div>
+<div class="messageMeta ToggleTriggerAnchor">
+<div class="privateControls">
+<span class="item muted">
+<span class="authorEnd"><a href="https://forums.terraria.org/index.php?members/spazitnazer.98788/" class="username author" dir="auto">Spazitnazer</a>,</span>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/#post-1488482" title="Permalink" class="datePermalink"><span class="DateTime" title="Nov 10, 2017 at 1:47 AM">Nov 10, 2017</span></a>
+</span>
+<a href="https://forums.terraria.org/index.php?posts/1488482/report" class="OverlayTrigger item control report" data-cacheoverlay="false"><span></span>Report</a>
+</div>
+<div class="publicControls">
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/#post-1488482" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="index.php?posts/1488482/permalink">#16</a>
+<a href="https://forums.terraria.org/index.php?posts/1488482/like" class="LikeLink item control like" data-container="#likes-post-1488482"><span></span><span class="LikeLabel">Like</span></a>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/reply&amp;quote=1488482" data-messageid="1488482" class="MultiQuoteControl JsOnly item control" title="Toggle Multi-Quote"><span></span><span class="symbol">+ Quote</span></a>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/reply&amp;quote=1488482" data-posturl="index.php?posts/1488482/quote" data-tip="#MQ-1488482" class="ReplyQuote item control reply" title="Reply, quoting this message"><span></span>Reply</a>
+</div>
+</div>
+</li>
+<li id="post-1488991" class="message   " data-author="ED209">
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">
+<div class="messageUserBlock ">
+<div class="avatarHolder">
+<span class="helper"></span>
+<a href="https://forums.terraria.org/index.php?members/ed209.25268/" class="avatar Av25268m" data-avatarhtml="true"><img src="./PC - [Showcase] 1.3 Pumpkin_Frost Moon New Records Arena _ Terraria Community Forums_files/25268.jpg" width="96" height="96" alt="ED209"></a>
+
+</div>
+<h3 class="userText">
+<a href="https://forums.terraria.org/index.php?members/ed209.25268/" class="username" dir="auto" itemprop="name">ED209</a>
+<em class="userTitle" itemprop="title" style="background:url(&#39;/assets/ribbons/plantera.png&#39;);">
+Plantera
+</em>
+
+</h3>
+<div class="extraUserInfo">
+<dl class="conversationPostBitContainer">
+<a class="conversationPostBitLink" href="https://forums.terraria.org/index.php?conversations/add&amp;to=ED209"><span class="conversationPostBitText">Start a Conversation</span></a>
+</dl>
+</div>
+<span class="arrow"><span></span></span>
+</div>
+</div>
+<div class="messageInfo primaryContent">
+<div class="messageContent">
+<article>
+<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+Could the whole diagonal surface not be a conveyor belt? That way you wouldn't lose any items due to the item limit in the game.<br>
+<br>
+Also, how were you collecting the banners when they weren't dropping anywhere near you?
+<div class="messageTextEndMarker">&nbsp;</div>
+</blockquote>
+</article>
+</div>
+<div id="likes-post-1488991"></div>
+</div>
+<div class="messageMeta ToggleTriggerAnchor">
+<div class="privateControls">
+<span class="item muted">
+<span class="authorEnd"><a href="https://forums.terraria.org/index.php?members/ed209.25268/" class="username author" dir="auto">ED209</a>,</span>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/#post-1488991" title="Permalink" class="datePermalink"><span class="DateTime" title="Nov 11, 2017 at 1:41 AM">Nov 11, 2017</span></a>
+</span>
+<a href="https://forums.terraria.org/index.php?posts/1488991/report" class="OverlayTrigger item control report" data-cacheoverlay="false"><span></span>Report</a>
+</div>
+<div class="publicControls">
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/#post-1488991" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="index.php?posts/1488991/permalink">#17</a>
+<a href="https://forums.terraria.org/index.php?posts/1488991/like" class="LikeLink item control like" data-container="#likes-post-1488991"><span></span><span class="LikeLabel">Like</span></a>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/reply&amp;quote=1488991" data-messageid="1488991" class="MultiQuoteControl JsOnly item control" title="Toggle Multi-Quote"><span></span><span class="symbol">+ Quote</span></a>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/reply&amp;quote=1488991" data-posturl="index.php?posts/1488991/quote" data-tip="#MQ-1488991" class="ReplyQuote item control reply" title="Reply, quoting this message"><span></span>Reply</a>
+</div>
+</div>
+</li>
+<li id="post-1489518" class="message   " data-author="MappyGaming">
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">
+<div class="messageUserBlock ">
+ <div class="avatarHolder">
+<span class="helper"></span>
+<a href="https://forums.terraria.org/index.php?members/mappygaming.43152/" class="avatar Av43152m" data-avatarhtml="true"><img src="./PC - [Showcase] 1.3 Pumpkin_Frost Moon New Records Arena _ Terraria Community Forums_files/43152.jpg" width="96" height="96" alt="MappyGaming"></a>
+
+</div>
+<h3 class="userText">
+<a href="https://forums.terraria.org/index.php?members/mappygaming.43152/" class="username" dir="auto" itemprop="name">MappyGaming</a>
+<em class="userTitle" itemprop="title" style="background:url(&#39;/assets/ribbons/plantera.png&#39;);">
+Plantera
+</em>
+
+</h3>
+<div class="extraUserInfo">
+<dl class="conversationPostBitContainer">
+<a class="conversationPostBitLink" href="https://forums.terraria.org/index.php?conversations/add&amp;to=MappyGaming"><span class="conversationPostBitText">Start a Conversation</span></a>
+</dl>
+</div>
+<span class="arrow"><span></span></span>
+</div>
+</div>
+<div class="messageInfo primaryContent">
+<div class="messageContent">
+<article>
+<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+<div class="bbCodeBlock bbCodeQuote" data-author="UranicPower6">
+<aside>
+<div class="attribution type">UranicPower6 said:
+<a href="https://forums.terraria.org/index.php?goto/post&amp;id=1483666#post-1483666" class="AttributionLink">↑</a>
+</div>
+<blockquote class="quoteContainer"><div class="quote">Hey Mappy, Does this still work? If so could you make a TEdit schematic of this farm?<img src="./PC - [Showcase] 1.3 Pumpkin_Frost Moon New Records Arena _ Terraria Community Forums_files/clear.png" class="mceSmilieSprite mceSmilie1" alt=":)" title="Smile    :)"></div><div class="quoteExpand">Click to expand...</div></blockquote>
+</aside>
+</div>Yes it does, but this arena is kinda out of date. Back in 1.3.1 update I upgraded it with conveyor belt so I could farm the items. Here are <a href="https://forums.terraria.org/index.php?threads/showcase-pumpkin-moon-coin-farm-255-platinum-coins-in-a-night.44661/" class="internalLink">the schematic of it</a> and <a href="https://www.youtube.com/watch?v=vLXplTYgMdg" target="_blank" class="externalLink" rel="nofollow">the video</a>. You can also download the map from the video description.<br>
+<br>
+<div class="bbCodeBlock bbCodeQuote" data-author="Spazitnazer">
+<aside>
+<div class="attribution type">Spazitnazer said:
+<a href="https://forums.terraria.org/index.php?goto/post&amp;id=1488482#post-1488482" class="AttributionLink">↑</a>
+</div>
+<blockquote class="quoteContainer"><div class="quote">Can’t you set up hoiks to dump the useless items in the lava?<br>
+<div class="doublePost">
+<blockquote class="doublePostTagTextContainer">
+<span class="doublePostTagText">--- Double Post Merged, <span class="doublePostTimeStamp"><span class="DateTime" title="Nov 10, 2017 at 1:47 AM">Nov 10, 2017</span></span><span class="doublePostOriginalDateText">, Original Post Date: <span class="doublePostOriginalDate"><span class="DateTime" title="Nov 10, 2017 at 1:46 AM">Nov 10, 2017</span></span></span> ---</span>
+</blockquote>
+</div><br>
+Or hoik the ENEMIES up to you to get extra damage from traps or bubbled lava?</div><div class="quoteExpand">Click to expand...</div></blockquote>
+</aside>
+</div>I don't actually see the point of it, now that we have the conveyor belt.<br>
+<br>
+<div class="bbCodeBlock bbCodeQuote" data-author="ED209">
+<aside>
+<div class="attribution type">ED209 said:
+<a href="https://forums.terraria.org/index.php?goto/post&amp;id=1488991#post-1488991" class="AttributionLink">↑</a>
+</div>
+<blockquote class="quoteContainer"><div class="quote">Could the whole diagonal surface not be a conveyor belt? That way you wouldn't lose any items due to the item limit in the game.<br>
+<br>
+Also, how were you collecting the banners when they weren't dropping anywhere near you?</div><div class="quoteExpand">Click to expand...</div></blockquote>
+</aside>
+</div><a href="https://www.youtube.com/watch?v=vLXplTYgMdg" target="_blank" class="externalLink" rel="nofollow">I actually made them be</a>, back in 1.3.1 update. This thread was posted over a year ago.<br>
+<br>
+They made banners automatically appear on every 50th kill in 1.3 update in PC version.
+<div class="messageTextEndMarker">&nbsp;</div>
+</blockquote>
+</article>
+</div>
+<div id="likes-post-1489518"></div>
+</div>
+<div class="messageMeta ToggleTriggerAnchor">
+<div class="privateControls">
+<span class="item muted">
+<span class="authorEnd"><a href="https://forums.terraria.org/index.php?members/mappygaming.43152/" class="username author" dir="auto">MappyGaming</a>,</span>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/#post-1489518" title="Permalink" class="datePermalink"><span class="DateTime" title="Nov 12, 2017 at 5:10 AM">Nov 12, 2017</span></a>
+</span>
+<a href="https://forums.terraria.org/index.php?posts/1489518/report" class="OverlayTrigger item control report" data-cacheoverlay="false"><span></span>Report</a>
+</div>
+<div class="publicControls">
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/#post-1489518" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="index.php?posts/1489518/permalink">#18</a>
+<a href="https://forums.terraria.org/index.php?posts/1489518/like" class="LikeLink item control like" data-container="#likes-post-1489518"><span></span><span class="LikeLabel">Like</span></a>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/reply&amp;quote=1489518" data-messageid="1489518" class="MultiQuoteControl JsOnly item control" title="Toggle Multi-Quote"><span></span><span class="symbol">+ Quote</span></a>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/reply&amp;quote=1489518" data-posturl="index.php?posts/1489518/quote" data-tip="#MQ-1489518" class="ReplyQuote item control reply" title="Reply, quoting this message"><span></span>Reply</a>
+</div>
+</div>
+</li>
+<li id="post-1489581" class="message   " data-author="ED209">
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">
+<div class="messageUserBlock ">
+<div class="avatarHolder">
+<span class="helper"></span>
+<a href="https://forums.terraria.org/index.php?members/ed209.25268/" class="avatar Av25268m" data-avatarhtml="true"><img src="./PC - [Showcase] 1.3 Pumpkin_Frost Moon New Records Arena _ Terraria Community Forums_files/25268.jpg" width="96" height="96" alt="ED209"></a>
+
+</div>
+<h3 class="userText">
+<a href="https://forums.terraria.org/index.php?members/ed209.25268/" class="username" dir="auto" itemprop="name">ED209</a>
+<em class="userTitle" itemprop="title" style="background:url(&#39;/assets/ribbons/plantera.png&#39;);">
+Plantera
+</em>
+
+</h3>
+<div class="extraUserInfo">
+<dl class="conversationPostBitContainer">
+<a class="conversationPostBitLink" href="https://forums.terraria.org/index.php?conversations/add&amp;to=ED209"><span class="conversationPostBitText">Start a Conversation</span></a>
+</dl>
+</div>
+<span class="arrow"><span></span></span>
+</div>
+</div>
+<div class="messageInfo primaryContent">
+<div class="messageContent">
+<article>
+<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+<div class="bbCodeBlock bbCodeQuote" data-author="MappyGaming">
+<aside>
+<div class="attribution type">MappyGaming said:
+<a href="https://forums.terraria.org/index.php?goto/post&amp;id=1489518#post-1489518" class="AttributionLink">↑</a>
+</div>
+<blockquote class="quoteContainer"><div class="quote">automatically appear</div><div class="quoteExpand">Click to expand...</div></blockquote>
+</aside>
+</div>In the player's inventory? You don't need to pick them up?
+<div class="messageTextEndMarker">&nbsp;</div>
+</blockquote>
+</article>
+</div>
+<div id="likes-post-1489581"></div>
+</div>
+<div class="messageMeta ToggleTriggerAnchor">
+<div class="privateControls">
+<span class="item muted">
+<span class="authorEnd"><a href="https://forums.terraria.org/index.php?members/ed209.25268/" class="username author" dir="auto">ED209</a>,</span>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/#post-1489581" title="Permalink" class="datePermalink"><span class="DateTime" title="Nov 12, 2017 at 1:07 PM">Nov 12, 2017</span></a>
+</span>
+<a href="https://forums.terraria.org/index.php?posts/1489581/report" class="OverlayTrigger item control report" data-cacheoverlay="false"><span></span>Report</a>
+</div>
+<div class="publicControls">
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/#post-1489581" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="index.php?posts/1489581/permalink">#19</a>
+<a href="https://forums.terraria.org/index.php?posts/1489581/like" class="LikeLink item control like" data-container="#likes-post-1489581"><span></span><span class="LikeLabel">Like</span></a>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/reply&amp;quote=1489581" data-messageid="1489581" class="MultiQuoteControl JsOnly item control" title="Toggle Multi-Quote"><span></span><span class="symbol">+ Quote</span></a>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/reply&amp;quote=1489581" data-posturl="index.php?posts/1489581/quote" data-tip="#MQ-1489581" class="ReplyQuote item control reply" title="Reply, quoting this message"><span></span>Reply</a>
+</div>
+</div>
+</li>
+<li id="post-1490914" class="message   " data-author="MappyGaming">
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">
+<div class="messageUserBlock ">
+<div class="avatarHolder">
+<span class="helper"></span>
+<a href="https://forums.terraria.org/index.php?members/mappygaming.43152/" class="avatar Av43152m" data-avatarhtml="true"><img src="./PC - [Showcase] 1.3 Pumpkin_Frost Moon New Records Arena _ Terraria Community Forums_files/43152.jpg" width="96" height="96" alt="MappyGaming"></a>
+
+</div>
+<h3 class="userText">
+<a href="https://forums.terraria.org/index.php?members/mappygaming.43152/" class="username" dir="auto" itemprop="name">MappyGaming</a>
+<em class="userTitle" itemprop="title" style="background:url(&#39;/assets/ribbons/plantera.png&#39;);">
+Plantera
+</em>
+
+</h3>
+<div class="extraUserInfo">
+<dl class="conversationPostBitContainer">
+<a class="conversationPostBitLink" href="https://forums.terraria.org/index.php?conversations/add&amp;to=MappyGaming"><span class="conversationPostBitText">Start a Conversation</span></a>
+</dl>
+</div>
+<span class="arrow"><span></span></span>
+</div>
+</div>
+<div class="messageInfo primaryContent">
+<div class="messageContent">
+<article>
+<blockquote class="messageText SelectQuoteContainer ugc baseHtml">
+<div class="bbCodeBlock bbCodeQuote" data-author="ED209">
+<aside>
+<div class="attribution type">ED209 said:
+<a href="https://forums.terraria.org/index.php?goto/post&amp;id=1489581#post-1489581" class="AttributionLink">↑</a>
+</div>
+<blockquote class="quoteContainer"><div class="quote">In the player's inventory? You don't need to pick them up?</div><div class="quoteExpand">Click to expand...</div></blockquote>
+</aside>
+</div>Yes, that's right. They automatically appear in the player's inventory.
+<div class="messageTextEndMarker">&nbsp;</div>
+</blockquote>
+</article>
+</div>
+<div id="likes-post-1490914"></div>
+</div>
+<div class="messageMeta ToggleTriggerAnchor">
+<div class="privateControls">
+<span class="item muted">
+<span class="authorEnd"><a href="https://forums.terraria.org/index.php?members/mappygaming.43152/" class="username author" dir="auto">MappyGaming</a>,</span>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/#post-1490914" title="Permalink" class="datePermalink"><span class="DateTime" title="Nov 14, 2017 at 2:01 PM">Nov 14, 2017</span></a>
+</span>
+<a href="https://forums.terraria.org/index.php?posts/1490914/report" class="OverlayTrigger item control report" data-cacheoverlay="false"><span></span>Report</a>
+</div>
+<div class="publicControls">
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/#post-1490914" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="index.php?posts/1490914/permalink">#20</a>
+<a href="https://forums.terraria.org/index.php?posts/1490914/like" class="LikeLink item control like" data-container="#likes-post-1490914"><span></span><span class="LikeLabel">Like</span></a>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/reply&amp;quote=1490914" data-messageid="1490914" class="MultiQuoteControl JsOnly item control" title="Toggle Multi-Quote"><span></span><span class="symbol">+ Quote</span></a>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/reply&amp;quote=1490914" data-posturl="index.php?posts/1490914/quote" data-tip="#MQ-1490914" class="ReplyQuote item control reply" title="Reply, quoting this message"><span></span>Reply</a>
+</div>
+</div>
+</li>
+</ol>
+<input type="hidden" name="_xfToken" value="121300,1568470616,bbdff6733948fbda901714dc8dbb72d38a582177">
+</form>
+<div class="pageNavLinkGroup">
+<div class="linkGroup">
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/page-2" class="postsRemaining">1 more message...</a>
+</div>
+<div class="linkGroup" style="display: none"><a href="javascript:" class="muted JsOnly DisplayIgnoredContent Tooltip">Show Ignored Content</a></div>
+<span class="PageNav" data-page="1" data-range="2" data-start="2" data-end="2" data-last="2" data-sentinel="{{sentinel}}" data-baseurl="index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/page-{{sentinel}}">
+<div class="pageNavHeader">Page 1 of 2</div>
+<nav>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/" class="currentPage " rel="start">1</a>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/page-2" class="">2</a>
+<a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/page-2" class="text">Next &gt;</a>
+</nav>
+</span>
+</div>
+<div class="messageList quickReplyMessageList cleanEdges">
+<div class="quickReply">
+<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">
+<div class="messageUserBlock ">
+<div class="avatarHolder">
+<span class="helper"></span>
+<a href="https://forums.terraria.org/index.php?members/putianyi888.121300/" class="avatar Av121300m" data-avatarhtml="true"><img src="./PC - [Showcase] 1.3 Pumpkin_Frost Moon New Records Arena _ Terraria Community Forums_files/avatar_male_m.png" width="96" height="96" alt="putianyi888"></a>
+
+</div>
+<span class="arrow"><span></span></span>
+</div>
+</div>
+<form action="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/add-reply" method="post" class="AutoValidator blendedEditor" data-optinout="OptIn" id="QuickReply">
+<div>
+<div class="redactor_box"><ul class="redactor_toolbar"><li class="redactor_btn_group redactor_btn_right"><ul><li class="redactor_btn_container_switchmode"><a href="javascript:void(null);" title="Use BB Code Editor" class="redactor_btn_switchmode" unselectable="on" tabindex="-1"></a></li></ul></li><li class="redactor_btn_group redactor_btn_right"><ul><li class="redactor_btn_container_removeformat"><a href="javascript:void(null);" title="Remove Formatting" class="redactor_btn_removeformat" unselectable="on" tabindex="-1"></a></li></ul></li><li class="redactor_btn_group"><ul><li class="redactor_btn_container_bold"><a href="javascript:void(null);" title="Bold (Ctrl+B)" class="redactor_btn_bold" unselectable="on" tabindex="-1"></a></li><li class="redactor_btn_container_italic"><a href="javascript:void(null);" title="Italic (Ctrl+I)" class="redactor_btn_italic" unselectable="on" tabindex="-1"></a></li><li class="redactor_btn_container_underline"><a href="javascript:void(null);" title="Underline (Ctrl+U)" class="redactor_btn_underline" unselectable="on" tabindex="-1"></a></li></ul></li><li class="redactor_btn_group"><ul><li class="redactor_btn_container_fontcolor"><a href="javascript:void(null);" title="Text Color" class="redactor_btn_fontcolor" unselectable="on" tabindex="-1"></a></li><li class="redactor_btn_container_fontsize"><a href="javascript:void(null);" title="Font Size" class="redactor_btn_fontsize" unselectable="on" tabindex="-1"></a></li><li class="redactor_btn_container_fontfamily"><a href="javascript:void(null);" title="Font Family" class="redactor_btn_fontfamily" unselectable="on" tabindex="-1"></a></li></ul></li><li class="redactor_btn_group"><ul><li class="redactor_btn_container_createlink"><a href="javascript:void(null);" title="Link" class="redactor_btn_createlink" unselectable="on" tabindex="-1"></a></li><li class="redactor_btn_container_unlink"><a href="javascript:void(null);" title="Unlink" class="redactor_btn_unlink" unselectable="on" tabindex="-1"></a></li></ul></li><li class="redactor_btn_group"><ul><li class="redactor_btn_container_alignment"><a href="javascript:void(null);" title="Alignment" class="redactor_btn_alignment" unselectable="on" tabindex="-1"></a></li></ul></li><li class="redactor_btn_group"><ul><li class="redactor_btn_container_unorderedlist"><a href="javascript:void(null);" title="• Unordered List" class="redactor_btn_unorderedlist" unselectable="on" tabindex="-1"></a></li><li class="redactor_btn_container_orderedlist"><a href="javascript:void(null);" title="1. Ordered List" class="redactor_btn_orderedlist" unselectable="on" tabindex="-1"></a></li><li class="redactor_btn_container_outdent"><a href="javascript:void(null);" title="&lt; Outdent" class="redactor_btn_outdent" unselectable="on" tabindex="-1"></a></li><li class="redactor_btn_container_indent"><a href="javascript:void(null);" title="&gt; Indent" class="redactor_btn_indent" unselectable="on" tabindex="-1"></a></li></ul></li><li class="redactor_btn_group"><ul><li class="redactor_btn_container_smilies"><a href="javascript:void(null);" title="Smilies" class="redactor_btn_smilies" unselectable="on" tabindex="-1"></a></li><li class="redactor_btn_container_image"><a href="javascript:void(null);" title="Image" class="redactor_btn_image" unselectable="on" tabindex="-1"></a></li><li class="redactor_btn_container_media"><a href="javascript:void(null);" title="Media" class="redactor_btn_media" unselectable="on" tabindex="-1"></a></li><li class="redactor_btn_container_insert"><a href="javascript:void(null);" title="Insert..." class="redactor_btn_insert" unselectable="on" tabindex="-1"></a></li></ul></li><li class="redactor_btn_group"><ul><li class="redactor_btn_container_draft"><a href="javascript:void(null);" title="Drafts" class="redactor_btn_draft" unselectable="on" tabindex="-1"></a></li></ul></li><li class="redactor_btn_group"><ul><li class="redactor_btn_container_undo"><a href="javascript:void(null);" title="Undo (Ctrl+Z)" class="redactor_btn_undo" unselectable="on" tabindex="-1"></a></li><li class="redactor_btn_container_redo"><a href="javascript:void(null);" title="Redo (Ctrl+Y)" class="redactor_btn_redo" unselectable="on" tabindex="-1"></a></li></ul></li></ul><div class="placeholder" style="display: block;"><span>Write your reply...</span></div><iframe style="width: 100%; height: 100px;" frameborder="0" class="redactor_textCtrl redactor_MessageEditor redactor_BbCodeWysiwygEditor redactor_" src="./PC - [Showcase] 1.3 Pumpkin_Frost Moon New Records Arena _ Terraria Community Forums_files/saved_resource.html"></iframe><div class="redactor_editor_drop"><span>Drop files here to upload</span></div><textarea name="message_html" id="ctrl_message_html" class="textCtrl MessageEditor BbCodeWysiwygEditor " style="display: none;" data-css-url="css.php?style=37&amp;css=editor_contents&amp;d=1568287513" data-dialog-url="index.php?editor/dialog&amp;style=37" data-auto-save-url="index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/save-draft" data-options="{&quot;placeholder&quot;:&quot;reply_placeholder&quot;,&quot;autoSaveFrequency&quot;:&quot;60&quot;,&quot;bbCodes&quot;:[]}"></textarea></div>
+
+<input type="hidden" name="_xfRelativeResolver" value="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/">
+<script>
+if (typeof RELANG === 'undefined')
+{
+	var RELANG = {};
+}
+
+RELANG.xf = {
+	image: "Image",
+	link: "Link",
+	link_insert: "Link",
+	unlink: "Unlink",
+	quote: "Quote",
+	code: "Code",
+	bold: "Bold (Ctrl+B)",
+	italic: "Italic (Ctrl+I)",
+	fontcolor: "Text Color",
+	unorderedlist: "Unordered List",
+	orderedlist: "Ordered List",
+	outdent: "Outdent",
+	indent: "Indent",
+	none: "None",
+	align_left:	"Align Left",
+	align_center: "Align Center",
+	align_right: "Align Right",
+	deleted: "Strike-through",
+	underline: "Underline (Ctrl+U)",
+	alignment: "Alignment",
+	undo: "Undo (Ctrl+Z)",
+	redo: "Redo (Ctrl+Y)",
+	spoiler: "Spoiler",
+	insert: "Insert...",
+
+	remove_formatting: "Remove Formatting",
+	font_size: "Font Size",
+	font_family: "Font Family",
+	smilies: "Smilies",
+	media: "Media",
+	
+	drafts: "Drafts",
+	save_draft: "Save Draft",
+	delete_draft: "Delete Draft",
+	draft_saved: "Draft saved",
+	draft_deleted: "Draft deleted",
+
+	switch_mode_bb: "Use BB Code Editor",
+	switch_mode_rich: "Use Rich Text Editor",
+	
+	reply_placeholder: "Write your reply...",
+	
+	drop_files_here_to_upload: "Drop files here to upload",
+	uploads_are_not_available: "Uploads are not available."
+};
+</script>
+</div>
+<div class="submitUnit">
+<div class="draftUpdate">
+<span class="draftSaved">Draft saved</span>
+<span class="draftDeleted">Draft deleted</span>
+</div>
+<input type="button" class="button JsOnly MultiQuoteWatcher insertQuotes" id="MultiQuote" value="Insert Quotes..." tabindex="1" data-href="index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/multi-quote&amp;formId=%23QuickReply" data-add="+ Quote" data-add-message="Message added to multi-quote." data-remove="− Quote" data-remove-message="Message removed from multi-quote." data-cacheoverlay="false" style="display: none;">
+<input type="submit" class="button primary" value="Post Reply" accesskey="s">
+<span id="AttachmentUploader" class="buttonProxy AttachmentUploader" style="" data-placeholder="#SWFUploadPlaceHolder" data-trigger="#ctrl_uploader" data-postname="upload" data-maxfilesize="15728640" data-maxuploads="250" data-extensions="zip,txt,pdf,png,jpg,jpeg,jpe,gif,tapi,tapimod,plr,wld,gifv,webm,tar,gz,xz,7z,json,dynamicfont,log,cs,wav" data-action="https://forums.terraria.org/index.php?attachments/do-upload.json&amp;hash=d375f43daf51d31d5b116922162315fe&amp;content_type=post" data-uniquekey="" data-err-110="The uploaded file is too large." data-err-120="The uploaded file is empty." data-err-130="The uploaded file does not have an allowed extension." data-err-unknown="There was a problem uploading your file.">
+<span id="SWFUploadPlaceHolder"></span>
+<span><input type="button" value="Upload a File" id="ctrl_uploader" class="button OverlayTrigger DisableOnSubmit" data-href="https://forums.terraria.org/index.php?attachments/upload&amp;hash=d375f43daf51d31d5b116922162315fe&amp;content_type=post&amp;content_data[thread_id]=75976" data-hider="#AttachmentUploader"><input type="file" multiple="multiple" accept=".zip,.txt,.pdf,.png,.jpg,.jpeg,.jpe,.gif,.tapi,.tapimod,.plr,.wld,.gifv,.webm,.tar,.gz,.xz,.7z,.json,.dynamicfont,.log,.cs,.wav" style="visibility: hidden; position: absolute; width: 1px; height: 1px; overflow: hidden; left: -1000px;"></span>
+<span class="HiddenInput" data-name="_xfSessionId" data-value="1c3fa27efbf73f01fdd19676742e1886"></span>
+<span class="HiddenInput" data-name="content_data[thread_id]" data-value="75976"></span>
+</span>
+
+<input type="submit" class="button DisableOnSubmit" value="More Options..." name="more_options">
+</div>
+<div class="AttachmentEditor" style="display: none;">
+<div class="NoAttachments"></div>
+<div class="secondaryContent AttachmentInsertAllBlock JsOnly">
+<span></span>
+<div class="AttachmentText">
+<div class="label">Insert every image as a...</div>
+<div class="controls">
+
+<input type="button" value="Thumbnail" class="button smallButton AttachmentInsertAll" name="thumb">
+<input type="button" value="Full Image" class="button smallButton AttachmentInsertAll" name="image">
+</div>
+</div>
+</div>
+<ol class="AttachmentList New">
+<li id="AttachedFileTemplate" class="AttachedFile  secondaryContent">
+<div class="Thumbnail">
+<span class="genericAttachment"></span>
+</div>
+<div class="AttachmentText">
+<div class="Filename"><a href="https://forums.terraria.org/index.php?attachments/" target="_blank"></a></div>
+<input type="button" value="Cancel" class="button smallButton AttachmentCanceller">
+<span class="ProgressMeter"><span class="ProgressGraphic">&nbsp;</span><span class="ProgressCounter">0%</span></span>
+</div>
+</li>
+</ol>
+<input type="hidden" name="attachment_hash" value="d375f43daf51d31d5b116922162315fe">
+</div>
+<input type="hidden" name="last_date" value="1510668066" data-load-value="1510668066">
+<input type="hidden" name="last_known_date" value="1510668564">
+<input type="hidden" name="_xfToken" value="121300,1568470616,bbdff6733948fbda901714dc8dbb72d38a582177">
+</form>
+</div>
+</div>
+<div class="sharePage texturedPanel">
+<div class="tweet shareControl">
+<iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" style="position: static; visibility: visible; width: 63px; height: 20px;" title="Twitter Tweet Button" src="./PC - [Showcase] 1.3 Pumpkin_Frost Moon New Records Arena _ Terraria Community Forums_files/tweet_button.d9084ca5af1ffbe01c8d444cfadfa6fe.en.html" data-url="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/"></iframe>
+</div>
+<div class="facebookLike shareControl">
+<div class="fb-like fb_iframe_widget" data-href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/" data-width="400" data-layout="standard" data-action="recommend" data-show-faces="true" data-colorscheme="dark" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=recommend&amp;app_id=&amp;color_scheme=dark&amp;container_width=0&amp;href=https%3A%2F%2Fforums.terraria.org%2Findex.php%3Fthreads%2Fshowcase-1-3-pumpkin-frost-moon-new-records-arena.75976%2F&amp;layout=standard&amp;locale=en_US&amp;sdk=joey&amp;show_faces=true&amp;width=400"><span style="vertical-align: bottom; width: 400px; height: 24px;"><iframe name="f1cc8f5f159a284" width="400px" height="1000px" title="fb:like Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="./PC - [Showcase] 1.3 Pumpkin_Frost Moon New Records Arena _ Terraria Community Forums_files/like.html" style="border: none; visibility: visible; width: 400px; height: 24px;" class=""></iframe></span></div>
+</div>
+</div>
+<footer>
+<div class="footerContainer">
+<div class="breadBoxBottom">
+<nav>
+<fieldset class="breadcrumb" style="">
+<a href="https://forums.terraria.org/index.php?misc/quick-navigation-menu&amp;selected=node-194" class="OverlayTrigger jumpMenuTrigger" data-cacheoverlay="true" title="Open quick navigation"></a>
+<div class="boardTitle"><strong>Terraria Community Forums</strong></div>
+<span class="crumbs">
+<span class="crust homeCrumb">
+<a href="https://forums.terraria.org/index.php" class="crumb"><span>Home</span></a>
+<span class="arrow"><span></span></span>
+</span>
+<span class="crust selectedTabCrumb">
+<a href="https://forums.terraria.org/index.php?forums/" class="crumb"><span>Forums</span></a>
+<span class="arrow"><span>&gt;</span></span>
+</span>
+<span class="crust">
+<a href="https://forums.terraria.org/index.php?forums/#terraria-cross-platform-discussion.4" class="crumb"><span>Terraria - Cross-Platform Discussion</span></a>
+<span class="arrow"><span>&gt;</span></span>
+</span>
+<span class="crust">
+<a href="https://forums.terraria.org/index.php?forums/terraria-guides.177/" class="crumb"><span>Terraria Guides</span></a>
+<span class="arrow"><span>&gt;</span></span>
+</span>
+<span class="crust">
+<a href="https://forums.terraria.org/index.php?forums/t-mec-terraria-mechanical-engineering-corps.194/" class="crumb"><span>[T-MEC] Terraria Mechanical Engineering Corps</span></a>
+<span class="arrow"><span>&gt;</span></span>
+</span>
+</span>
+</fieldset>
+</nav></div>
+<div class="footer">
+<div class="pageWidth">
+<div class="pageContent">
+<dl class="choosers">
+<dt>Style</dt>
+<dd><a href="https://forums.terraria.org/index.php?misc/style&amp;redirect=%2Findex.php%3Fthreads%2Fshowcase-1-3-pumpkin-frost-moon-new-records-arena.75976%2F" class="OverlayTrigger Tooltip" rel="nofollow">Overworld</a></dd>
+</dl>
+<ul class="footerLinks">
+<li><a href="https://support.re-logic.com/">Contact Us</a></li>
+<li><a href="https://forums.terraria.org/index.php?help/">Help</a></li>
+<li><a href="https://forums.terraria.org/index.php" class="homeLink">Home</a></li>
+<li><a href="https://forums.terraria.org/index.php?threads/showcase-1-3-pumpkin-frost-moon-new-records-arena.75976/#navigation" class="topLink">Top</a></li>
+<li><a href="https://forums.terraria.org/index.php?forums/-/index.rss" rel="alternate" class="globalFeed" target="_blank" title="RSS feed for Terraria Community Forums">RSS</a></li>
+</ul>
+<span class="helper"></span>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<div class="footerLegal">
+<div class="pageWidth">
+<div class="pageContent">
+<ul id="legal">
+<li><a href="https://forums.terraria.org/index.php?help/terms">Terms and Rules</a></li>
+<li><a href="https://forums.terraria.org/index.php?help/privacy-policy">Privacy Policy</a></li>
+</ul>
+<div id="copyright"> </div>
+<span class="helper"></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<header>
+<div id="header">
+<div id="logoBlock">
+<div class="pageWidth">
+<div class="pageContent">
+<div id="logo"><a href="https://forums.terraria.org/index.php">
+<span></span>
+<img src="./PC - [Showcase] 1.3 Pumpkin_Frost Moon New Records Arena _ Terraria Community Forums_files/logo.png" alt="Terraria Community Forums">
+</a></div>
+<span class="helper"></span>
+</div>
+</div>
+</div>
+<div id="navigation" class="pageWidth withSearch">
+<div class="grassBar grassHeader"></div>
+<div class="pageContent">
+<nav>
+<div class="navTabs">
+<ul class="publicTabs">
+
+
+<li class="navTab articles Popup PopupControl PopupClosed PopupContainerControl">
+<a href="https://forums.terraria.org/index.php" class="navLink">Home</a>
+<a href="https://forums.terraria.org/index.php" class="SplitCtrl" rel="Menu"></a>
+
+</li>
+
+<li class="navTab forums selected">
+<a href="https://forums.terraria.org/index.php?forums/" class="navLink">Forums</a>
+<a href="https://forums.terraria.org/index.php?forums/" class="SplitCtrl" rel="Menu"></a>
+<div class="tabLinks forumsTabLinks">
+<div class="primaryContent menuHeader">
+<h3>Forums</h3>
+<div class="muted">Quick Links</div>
+</div>
+<ul class="secondaryContent blockLinksList">
+<li><a href="https://forums.terraria.org/index.php?forums/t-mec-terraria-mechanical-engineering-corps.194/-/mark-read&amp;date=1568470616" class="OverlayTrigger">Mark Forums Read</a></li>
+<li><a href="https://forums.terraria.org/index.php?search/&amp;type=post">Search Forums</a></li>
+<li><a href="https://forums.terraria.org/index.php?watched/forums">Watched Forums</a></li>
+<li><a href="https://forums.terraria.org/index.php?watched/threads">Watched Threads</a></li>
+<li><a href="https://forums.terraria.org/index.php?find-new/posts" rel="nofollow">New Posts</a></li>
+</ul>
+</div>
+</li>
+
+
+<li class="navTab members Popup PopupControl PopupClosed PopupContainerControl">
+<a href="https://forums.terraria.org/index.php?members/" class="navLink">Members</a>
+<a href="https://forums.terraria.org/index.php?members/" class="SplitCtrl" rel="Menu"></a>
+
+</li>
+
+
+<li class="navTab navigationHiddenTabs Popup PopupControl PopupClosed PopupContainerControl" style="display: none;">
+<a rel="Menu" class="navLink NoPopupGadget"><span class="menuIcon">Menu</span></a>
+
+</li>
+
+</ul>
+<ul class="visitorTabs">
+
+<li class="navTab account Popup PopupControl PopupClosed  PopupContainerControl">
+<a href="https://forums.terraria.org/index.php?account/" class="navLink accountPopup NoPopupGadget" rel="Menu"><strong class="accountUsername">putianyi888</strong>
+<strong class="itemCount ResponsiveOnly Zero" id="VisitorExtraMenu_Counter">
+<span class="Total">0</span>
+<span class="arrow"></span>
+</strong>
+</a>
+
+</li>
+
+<li class="navTab inbox Popup PopupControl PopupClosed  PopupContainerControl">
+<a href="https://forums.terraria.org/index.php?conversations/" rel="Menu" class="navLink NoPopupGadget">Inbox
+<strong class="itemCount Zero" id="ConversationsMenu_Counter" data-text="You have %d new unread conversation(s).">
+<span class="Total">0</span>
+<span class="arrow"></span>
+</strong>
+</a>
+
+
+</li>
+
+<li class="navTab alerts Popup PopupControl PopupClosed PopupContainerControl">
+<a href="https://forums.terraria.org/index.php?account/alerts" rel="Menu" class="navLink NoPopupGadget">Alerts
+<strong class="itemCount Zero" id="AlertsMenu_Counter" data-text="You have %d new alert(s).">
+<span class="Total">0</span>
+<span class="arrow"></span>
+</strong>
+</a>
+
+</li>
+</ul>
+</div>
+<span class="helper"></span>
+</nav>
+</div>
+</div>
+<div id="searchBar" class="pageWidth">
+<span id="QuickSearchPlaceholder" title="Search">Search</span>
+<fieldset id="QuickSearch">
+<form action="https://forums.terraria.org/index.php?search/search" method="post" class="formPopup">
+<div class="primaryControls">
+
+<input type="search" name="keywords" value="" class="textCtrl" placeholder="Search..." title="Enter your search and hit enter" id="QuickSearchQuery">
+
+</div>
+<div class="secondaryControls">
+<div class="controlsWrapper">
+
+<dl class="ctrlUnit">
+<dt></dt>
+<dd><ul>
+<li><label><input type="checkbox" name="title_only" value="1" id="search_bar_title_only" class="AutoChecker" data-uncheck="#search_bar_thread"> Search titles only</label></li>
+</ul></dd>
+</dl>
+<dl class="ctrlUnit">
+<dt><label for="searchBar_users">Posted by Member:</label></dt>
+<dd>
+<input type="text" name="users" value="" class="textCtrl AutoComplete" id="searchBar_users" autocomplete="off">
+<p class="explain">Separate names with a comma.</p>
+</dd>
+</dl>
+<dl class="ctrlUnit">
+<dt><label for="searchBar_date">Newer Than:</label></dt>
+<dd><input type="text" data-orig-type="date" name="date" value="" class="textCtrl date" id="searchBar_date"></dd>
+</dl>
+<dl class="ctrlUnit">
+<dt></dt>
+<dd><ul>
+<li><label title="Search only [Showcase] 1.3 Pumpkin/Frost Moon New Records Arena"><input type="checkbox" name="type[post][thread_id]" value="75976" id="search_bar_thread" class="AutoChecker" data-uncheck="#search_bar_title_only, #search_bar_nodes"> Search this thread only</label></li>
+<li><label title="Search only [T-MEC] Terraria Mechanical Engineering Corps"><input type="checkbox" name="nodes[]" value="194" id="search_bar_nodes" class="Disabler AutoChecker" checked="checked" data-uncheck="#search_bar_thread"> Search this forum only</label>
+<ul id="search_bar_nodes_Disabler">
+<li><label><input type="checkbox" name="type[post][group_discussion]" value="1" id="search_bar_group_discussion" class="AutoChecker" data-uncheck="#search_bar_thread"> Display results as threads</label></li>
+</ul></li>
+</ul></dd>
+</dl>
+</div>
+
+<dl class="ctrlUnit submitUnit">
+<dt></dt>
+<dd>
+<input type="submit" value="Search" class="button primary Tooltip">
+<div class="Popup" id="commonSearches">
+<a rel="Menu" class="button NoPopupGadget Tooltip PopupControl" data-tipclass="flipped"><span class="arrowWidget"></span></a>
+
+</div>
+<a href="https://forums.terraria.org/index.php?search/" class="button moreOptions Tooltip">More...</a>
+</dd>
+</dl>
+</div>
+<input type="hidden" name="_xfToken" value="121300,1568470616,bbdff6733948fbda901714dc8dbb72d38a582177">
+</form>
+</fieldset>
+</div>
+</div>
+</header>
+</div>
+<script>
+
+
+jQuery.extend(true, XenForo,
+{
+	visitor: { user_id: 121300 },
+	serverTimeInfo:
+	{
+		now: 1568470616,
+		today: 1568415600,
+		todayDow: 6
+	},
+	_lightBoxUniversal: "0",
+	_enableOverlays: "1",
+	_animationSpeedMultiplier: "1",
+	_overlayConfig:
+	{
+		top: "10%",
+		speed: 200,
+		closeSpeed: 100,
+		mask:
+		{
+			color: "rgb(0, 0, 0)",
+			opacity: "0.6",
+			loadSpeed: 200,
+			closeSpeed: 100
+		}
+	},
+	_ignoredUsers: [],
+	_loadedScripts: {"EWRporta2_Global":true,"thread_view":true,"message":true,"bb_code":true,"message_user_info":true,"likes_summary":true,"doublepost_bb_code_tag":true,"quick_reply":true,"editor_ui":true,"attachment_editor":true,"share_page":true,"panel_scroller":true,"notices":true,"js\/xenforo\/discussion.js?_v=7b2ecbf6":true,"js\/redactor\/redactor.js?_v=7b2ecbf6":true,"js\/xenforo\/bb_code_edit.js?_v=7b2ecbf6":true,"js\/xenforo\/attachment_editor_new.js?_v=7b2ecbf6":true,"js\/flow.js\/flow-rollup.min.js?_v=7b2ecbf6":true},
+	_cookieConfig: { path: "/", domain: "", prefix: "xft_"},
+	_csrfToken: "121300,1568470616,bbdff6733948fbda901714dc8dbb72d38a582177",
+	_csrfRefreshUrl: "index.php?login/csrf-token-refresh",
+	_jsVersion: "7b2ecbf6",
+	_noRtnProtect: false,
+	_noSocialLogin: false
+});
+jQuery.extend(XenForo.phrases,
+{
+	cancel: "Cancel",
+
+	a_moment_ago:    "A moment ago",
+	one_minute_ago:  "1 minute ago",
+	x_minutes_ago:   "%minutes% minutes ago",
+	today_at_x:      "Today at %time%",
+	yesterday_at_x:  "Yesterday at %time%",
+	day_x_at_time_y: "%day% at %time%",
+
+	day0: "Sunday",
+	day1: "Monday",
+	day2: "Tuesday",
+	day3: "Wednesday",
+	day4: "Thursday",
+	day5: "Friday",
+	day6: "Saturday",
+
+	_months: "January,February,March,April,May,June,July,August,September,October,November,December",
+	_daysShort: "Sun,Mon,Tue,Wed,Thu,Fri,Sat",
+
+	following_error_occurred: "The following error occurred",
+	server_did_not_respond_in_time_try_again: "The server did not respond in time. Please try again.",
+	logging_in: "Logging in",
+	click_image_show_full_size_version: "Click this image to show the full-size version.",
+	show_hidden_content_by_x: "Show hidden content by {names}"
+});
+
+// Facebook Javascript SDK
+XenForo.Facebook.appId = "";
+XenForo.Facebook.forceInit = true;
+
+
+</script>
+
+<div id="calroot" style="display: none; position: absolute;"><div id="calhead"><a id="calprev">←</a><div id="caltitle"></div><a id="calnext">→</a></div><div id="calbody"><div id="caldays"><span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span></div><div id="calweeks"></div></div></div><div class="redactor_dropdown" style="display: none; width: 247px;"><a rel="#ffffff" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(255, 255, 255);"></a><a rel="#ff9999" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(255, 153, 153);"></a><a rel="#ffcc99" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(255, 204, 153);"></a><a rel="#ffff99" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(255, 255, 153);"></a><a rel="#ccff99" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(204, 255, 153);"></a><a rel="#99ff99" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(153, 255, 153);"></a><a rel="#99ffcc" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(153, 255, 204);"></a><a rel="#99ffff" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(153, 255, 255);"></a><a rel="#99ccff" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(153, 204, 255);"></a><a rel="#9999ff" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(153, 153, 255);"></a><a rel="#cc99ff" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(204, 153, 255);"></a><a rel="#ff99ff" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(255, 153, 255);"></a><a rel="#ff99cc" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(255, 153, 204);"></a><a rel="#bfbfbf" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(191, 191, 191);"></a><a rel="#ff4d4d" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(255, 77, 77);"></a><a rel="#ffa64d" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(255, 166, 77);"></a><a rel="#ffff4d" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(255, 255, 77);"></a><a rel="#a6ff4d" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(166, 255, 77);"></a><a rel="#4dff4d" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(77, 255, 77);"></a><a rel="#4dffa6" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(77, 255, 166);"></a><a rel="#4dffff" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(77, 255, 255);"></a><a rel="#4da6ff" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(77, 166, 255);"></a><a rel="#4d4dff" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(77, 77, 255);"></a><a rel="#a64dff" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(166, 77, 255);"></a><a rel="#ff4dff" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(255, 77, 255);"></a><a rel="#ff4da6" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(255, 77, 166);"></a><a rel="#808080" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(128, 128, 128);"></a><a rel="#ff0000" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(255, 0, 0);"></a><a rel="#ff8000" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(255, 128, 0);"></a><a rel="#ffff00" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(255, 255, 0);"></a><a rel="#80ff00" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(128, 255, 0);"></a><a rel="#00ff00" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(0, 255, 0);"></a><a rel="#00ff80" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(0, 255, 128);"></a><a rel="#00ffff" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(0, 255, 255);"></a><a rel="#0080ff" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(0, 128, 255);"></a><a rel="#0000ff" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(0, 0, 255);"></a><a rel="#8000ff" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(128, 0, 255);"></a><a rel="#ff00ff" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(255, 0, 255);"></a><a rel="#ff0080" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(255, 0, 128);"></a><a rel="#404040" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(64, 64, 64);"></a><a rel="#b30000" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(179, 0, 0);"></a><a rel="#b35900" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(179, 89, 0);"></a><a rel="#b3b300" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(179, 179, 0);"></a><a rel="#59b300" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(89, 179, 0);"></a><a rel="#00b300" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(0, 179, 0);"></a><a rel="#00b359" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(0, 179, 89);"></a><a rel="#00b3b3" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(0, 179, 179);"></a><a rel="#0059b3" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(0, 89, 179);"></a><a rel="#0000b3" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(0, 0, 179);"></a><a rel="#5900b3" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(89, 0, 179);"></a><a rel="#b300b3" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(179, 0, 179);"></a><a rel="#b30059" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(179, 0, 89);"></a><a rel="#000000" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(0, 0, 0);"></a><a rel="#660000" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(102, 0, 0);"></a><a rel="#663300" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(102, 51, 0);"></a><a rel="#666600" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(102, 102, 0);"></a><a rel="#336600" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(51, 102, 0);"></a><a rel="#006600" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(0, 102, 0);"></a><a rel="#006633" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(0, 102, 51);"></a><a rel="#006666" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(0, 102, 102);"></a><a rel="#003366" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(0, 51, 102);"></a><a rel="#000066" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(0, 0, 102);"></a><a rel="#330066" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(51, 0, 102);"></a><a rel="#660066" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(102, 0, 102);"></a><a rel="#660033" href="javascript:void(null);" class="redactor_color_link" unselectable="on" style="background-color: rgb(102, 0, 51);"></a><a href="javascript:void(null);" class="redactor_color_none" unselectable="on">None</a></div><div class="redactor_dropdown" style="display: none;"><a href="javascript:void(null);" unselectable="on" class="" style="font-size: 9px">1</a><a href="javascript:void(null);" unselectable="on" class="" style="font-size: 10px">2</a><a href="javascript:void(null);" unselectable="on" class="" style="font-size: 12px">3</a><a href="javascript:void(null);" unselectable="on" class="" style="font-size: 15px">4</a><a href="javascript:void(null);" unselectable="on" class="" style="font-size: 18px">5</a><a href="javascript:void(null);" unselectable="on" class="" style="font-size: 22px">6</a><a href="javascript:void(null);" unselectable="on" class="" style="font-size: 26px">7</a></div><div class="redactor_dropdown" style="display: none;"><a href="javascript:void(null);" unselectable="on" class="" style="font-family: arial,helvetica,sans-serif">Arial</a><a href="javascript:void(null);" unselectable="on" class="" style="font-family: &#39;book antiqua&#39;,palatino,serif">Book Antiqua</a><a href="javascript:void(null);" unselectable="on" class="" style="font-family: &#39;courier new&#39;,courier,monospace">Courier New</a><a href="javascript:void(null);" unselectable="on" class="" style="font-family: georgia,palatino,serif">Georgia</a><a href="javascript:void(null);" unselectable="on" class="" style="font-family: tahoma,arial,helvetica,sans-serif">Tahoma</a><a href="javascript:void(null);" unselectable="on" class="" style="font-family: &#39;times new roman&#39;,times,serif">Times New Roman</a><a href="javascript:void(null);" unselectable="on" class="" style="font-family: &#39;trebuchet ms&#39;,geneva,sans-serif">Trebuchet MS</a><a href="javascript:void(null);" unselectable="on" class="" style="font-family: verdana,geneva,sans-serif">Verdana</a></div><div class="redactor_dropdown" style="display: none;"><a href="javascript:void(null);" unselectable="on" class="icon alignLeft" style="">Align Left</a><a href="javascript:void(null);" unselectable="on" class="icon alignCenter" style="">Align Center</a><a href="javascript:void(null);" unselectable="on" class="icon alignRight" style="">Align Right</a></div><div class="redactor_dropdown" style="display: none;"><a href="javascript:void(null);" unselectable="on" class="icon quote" style="">Quote</a><a href="javascript:void(null);" unselectable="on" class="icon spoiler" style="">Spoiler</a><a href="javascript:void(null);" unselectable="on" class="icon code" style="">Code</a><a href="javascript:void(null);" unselectable="on" class="icon strikethrough" style="">Strike-through</a></div><div class="redactor_dropdown" style="display: none;"><a href="javascript:void(null);" unselectable="on" class="icon saveDraft" style="">Save Draft</a><a href="javascript:void(null);" unselectable="on" class="icon deleteDraft" style="">Delete Draft</a></div><div class="Menu cleanEdges" id="XenForoUniq0">
+<div class="primaryContent menuHeader"><h3>Thread Tools</h3></div>
+<ul class="secondaryContent blockLinksList">
+</ul>
+</div><div class="Menu JsOnly tabMenu articlesTabLinks" id="XenForoUniq1">
+<div class="primaryContent menuHeader">
+<h3>Home</h3>
+<div class="muted">Quick Links</div>
+</div>
+<ul class="secondaryContent blockLinksList">
+<li><a href="https://forums.terraria.org/index.php?watched/forums">Watched Forums</a></li>
+<li><a href="https://forums.terraria.org/index.php?watched/threads">Watched Threads</a></li>
+<li><a href="https://forums.terraria.org/index.php?find-new/posts" rel="nofollow">New Posts</a></li>
+<li><a href="https://forums.terraria.org/index.php?recent-activity/">Recent Activity</a></li>
+<li style="width: 50px; height: 10px;"></li>
+<li><a href="https://forums.terraria.org/index.php?articles/authors">Authors</a></li>
+</ul>
+</div><div class="Menu JsOnly tabMenu membersTabLinks" id="XenForoUniq2">
+<div class="primaryContent menuHeader">
+<h3>Members</h3>
+<div class="muted">Quick Links</div>
+</div>
+<ul class="secondaryContent blockLinksList">
+<li><a href="https://forums.terraria.org/index.php?members/">Notable Members</a></li>
+<li><a href="https://forums.terraria.org/index.php?online/">Current Visitors</a></li>
+<li><a href="https://forums.terraria.org/index.php?recent-activity/">Recent Activity</a></li>
+<li><a href="https://forums.terraria.org/index.php?find-new/profile-posts">New Profile Posts</a></li>
+</ul>
+</div><div class="Menu JsOnly blockLinksList primaryContent" id="NavigationHiddenMenu"></div><div class="Menu JsOnly" id="AccountMenu">
+<div class="primaryContent menuHeader">
+<a href="https://forums.terraria.org/index.php?members/putianyi888.121300/" class="avatar Av121300m NoOverlay plainImage" title="View your profile" data-avatarhtml="true"><span class="img m" style="background-image: url(&#39;styles/overworld/xenforo/avatars/avatar_male_m.png&#39;)"></span></a>
+<h3><a href="https://forums.terraria.org/index.php?members/putianyi888.121300/" class="concealed" title="View your profile">putianyi888</a></h3>
+<div class="muted">Terrarian</div>
+<ul class="links">
+<li class="fl"><a href="https://forums.terraria.org/index.php?members/putianyi888.121300/">Your Profile Page</a></li>
+</ul>
+</div>
+<div class="menuColumns secondaryContent">
+<ul class="col1 blockLinksList">
+<li><a href="https://forums.terraria.org/index.php?account/personal-details">Personal Details</a></li>
+<li><a href="https://forums.terraria.org/index.php?account/signature">Signature</a></li>
+<li><a href="https://forums.terraria.org/index.php?account/contact-details">Contact Details</a></li>
+<li><a href="https://forums.terraria.org/index.php?account/privacy">Privacy</a></li>
+<li><a href="https://forums.terraria.org/index.php?account/preferences" class="OverlayTrigger">Preferences</a></li>
+<li><a href="https://forums.terraria.org/index.php?account/alert-preferences">Alert Preferences</a></li>
+<li><a href="https://forums.terraria.org/index.php?account/avatar" class="OverlayTrigger" data-cacheoverlay="true">Avatar</a></li>
+<li><a href="https://forums.terraria.org/index.php?account/external-accounts">External Accounts</a></li>
+<li><a href="https://forums.terraria.org/index.php?account/security">Password</a></li>
+</ul>
+<ul class="col2 blockLinksList">
+<li><a href="https://forums.terraria.org/index.php?account/news-feed">Your News Feed</a></li>
+<li><a href="https://forums.terraria.org/index.php?conversations/">Conversations
+<strong class="itemCount Zero" id="VisitorExtraMenu_ConversationsCounter">
+<span class="Total">0</span>
+</strong></a></li>
+<li><a href="https://forums.terraria.org/index.php?account/alerts">Alerts
+<strong class="itemCount Zero" id="VisitorExtraMenu_AlertsCounter">
+<span class="Total">0</span>
+</strong></a></li>
+<li><a href="https://forums.terraria.org/index.php?account/likes">Likes You've Received</a></li>
+<li><a href="https://forums.terraria.org/index.php?search/member&amp;user_id=121300">Your Content</a></li>
+<li><a href="https://forums.terraria.org/index.php?account/following">People You Follow</a></li>
+<li><a href="https://forums.terraria.org/index.php?account/ignored">People You Ignore</a></li>
+</ul>
+</div>
+<div class="menuColumns secondaryContent">
+<ul class="col1 blockLinksList">
+<li>
+<form action="https://forums.terraria.org/index.php?account/toggle-visibility" method="post" class="AutoValidator visibilityForm">
+<label><input type="checkbox" name="visible" value="1" class="SubmitOnChange" checked="checked">
+Show online status</label>
+<input type="hidden" name="_xfToken" value="121300,1568470616,bbdff6733948fbda901714dc8dbb72d38a582177">
+</form>
+</li>
+</ul>
+<ul class="col2 blockLinksList">
+<li><a href="https://forums.terraria.org/index.php?logout/&amp;_xfToken=121300%2C1568470616%2Cbbdff6733948fbda901714dc8dbb72d38a582177" class="LogOut">Log Out</a></li>
+</ul>
+</div>
+<form action="https://forums.terraria.org/index.php?members/putianyi888.121300/post" method="post" class="sectionFooter statusPoster AutoValidator" data-optinout="OptIn">
+<textarea name="message" class="textCtrl StatusEditor UserTagger Elastic" placeholder="Update your status..." rows="1" cols="40" style="height:18px" data-statuseditorcounter="#visMenuSEdCount" data-nofocus="true"></textarea>
+<div class="submitUnit" style="display: none;">
+<span id="visMenuSEdCount" title="Characters remaining" class="statusEditorCounter">140</span>
+<input type="submit" class="button primary MenuCloser" value="Post">
+<input type="hidden" name="_xfToken" value="121300,1568470616,bbdff6733948fbda901714dc8dbb72d38a582177">
+<input type="hidden" name="return" value="1">
+</div>
+</form>
+</div><div class="Menu JsOnly navPopup" id="ConversationsMenu" data-contentsrc="index.php?conversations/popup" data-contentdest="#ConversationsMenu .listPlaceholder">
+<div class="menuHeader primaryContent">
+<h3>
+<span class="Progress"></span>
+<a href="https://forums.terraria.org/index.php?conversations/" class="concealed">Conversations</a>
+</h3>
+</div>
+<div class="listPlaceholder"></div>
+<div class="sectionFooter">
+<a href="https://forums.terraria.org/index.php?conversations/add" class="floatLink">Start a New Conversation</a>
+<a href="https://forums.terraria.org/index.php?conversations/">Show All...</a>
+</div>
+</div><div class="Menu JsOnly navPopup" id="AlertsMenu" data-contentsrc="index.php?account/alerts-popup" data-contentdest="#AlertsMenu .listPlaceholder" data-removecounter="#AlertsMenu_Counter">
+<div class="menuHeader primaryContent">
+<h3>
+<span class="Progress"></span>
+<a href="https://forums.terraria.org/index.php?account/alerts" class="concealed">Alerts</a>
+</h3>
+</div>
+<div class="listPlaceholder"></div>
+<div class="sectionFooter">
+<a href="https://forums.terraria.org/index.php?account/alert-preferences" class="floatLink">Alert Preferences</a>
+<a href="https://forums.terraria.org/index.php?account/alerts">Show All...</a>
+</div>
+</div><div class="Menu" id="XenForoUniq3">
+<div class="primaryContent menuHeader">
+<h3>Useful Searches</h3>
+</div>
+<ul class="secondaryContent blockLinksList">
+
+<li><a href="https://forums.terraria.org/index.php?find-new/posts&amp;recent=1" rel="nofollow">Recent Posts</a></li>
+<li><a href="https://forums.terraria.org/index.php?search/member&amp;user_id=121300&amp;content=thread">Your Threads</a></li>
+<li><a href="https://forums.terraria.org/index.php?search/member&amp;user_id=121300&amp;content=post">Your Posts</a></li>
+<li><a href="https://forums.terraria.org/index.php?search/member&amp;user_id=121300&amp;content=profile_post">Your Profile Posts</a></li>
+
+</ul>
+</div><div id="AjaxProgress" class="xenOverlay" style="top: 0px; left: 0px; position: fixed; display: none;"><div class="content"><span class="close"></span></div></div><iframe scrolling="no" frameborder="0" allowtransparency="true" src="./PC - [Showcase] 1.3 Pumpkin_Frost Moon New Records Arena _ Terraria Community Forums_files/widget_iframe.d9084ca5af1ffbe01c8d444cfadfa6fe.html" title="Twitter settings iframe" style="display: none;"></iframe><div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div><iframe name="fb_xdm_frame_https" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="./PC - [Showcase] 1.3 Pumpkin_Frost Moon New Records Arena _ Terraria Community Forums_files/xd_arbiter.html" style="border: none;"></iframe></div><div></div></div></div><div class="xenTooltip bbCodeImageTip" style="display: none;">Click this image to show the full-size version.</div></body></html>
